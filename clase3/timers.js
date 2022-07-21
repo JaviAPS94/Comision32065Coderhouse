@@ -2,7 +2,7 @@
 //     console.log(`parametro: ${param}`);
 // }
 
-// setTimeout(myFunc, 1500);
+// setTimeout(myFunc, 1500, asdad, asd);
 
 let count = 0;
 

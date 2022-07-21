@@ -1,28 +1,28 @@
-// function funA() {
-//     console.log(1);
-//     funB();
-//     console.log(2);
-// }
+function funA() {
+    console.log(1);
+    funB();
+    console.log(2);
+}
 
-// function funB() {
-//     console.log(3);
-//     funC();
-//     console.log(4);
-// }
+function funB() {
+    console.log(3);
+    funC();
+    console.log(4);
+}
 
-// function funC() {
-//     console.log(5);
-// }
+function funC() {
+    console.log(5);
+}
 
-// funA();
+funA();
 
-// function myFunc(arg) {
-//     console.log(`arg was => ${arg}`);
-// }
+function myFunc(arg) {
+    console.log(`arg was => ${arg}`);
+}
 
-// console.log('prueba antes');
+console.log('prueba antes');
 
-// setTimeout(myFunc, 1500, 'funky');
+setTimeout(myFunc, 1500, 'funky');
 
-// console.log('prueba después');
+console.log('prueba después');
 
