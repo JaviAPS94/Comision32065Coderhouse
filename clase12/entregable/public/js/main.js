@@ -9,7 +9,7 @@ formAgregarProducto.addEventListener('submit', e => {
 })
 
 socket.on('productos', productos => {
-    //generar el html y colocarlo en el tag productos llamando al funcion makeHtmlTable
+    //generar el html y colocarlo en el tag productos llamando a la funcion makeHtmlTable
 });
 
 function makeHtmlTable(productos) {

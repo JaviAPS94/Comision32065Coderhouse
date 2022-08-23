@@ -10,10 +10,13 @@ const ContenedorArchivo = require('../contenedores/ContenedorArchivo.js')
 // instancio servidor, socket y api
 
 
+
 //--------------------------------------------
 // configuro el socket
 
 io.on('connection', async socket => {
+    //productos
+    //mensajes
 });
 
 //--------------------------------------------
