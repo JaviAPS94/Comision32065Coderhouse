@@ -37,6 +37,9 @@ const knexConnection = knex(options);
 
         console.log('-------> Actualizando registro');
         await knexConnection.from('articulos').where('id', 2).update({stock: 0});
+
+        console.log('-------> Borrando registro 2');
+        await knexConnection.from('articulos').where('id', 5).del()
     } catch (error) {
         console.log(error);
     } finally {

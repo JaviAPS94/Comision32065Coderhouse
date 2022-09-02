@@ -10,8 +10,8 @@ export default {
         client: 'mysql',
         connection: {
             host: 'localhost',
-            user: 'coderhouse',
-            password: 'coderhouse',
+            user: 'root',
+            password: '',
             database: 'coderhouse'
         }
     }

@@ -1,0 +1,16 @@
+{
+  "name": "after",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "create:tables": "node ./scripts/crearTablas.js",
+    "start:main": "node ./src/main.js",
+    "start": "npm run create:tables && npm start:main",
+    "dev": "node ./scripts/crearTablas.js && node ./src/main.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
