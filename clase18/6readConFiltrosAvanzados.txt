@@ -1,0 +1,16 @@
+db.coll.find({name: /^Max/})
+db.coll.find({name: /^Max$/i}) //regex case insensitive
+
+//Arrays
+db.coll.find({tags: {$all: ["Realm", "Charts"]}})
+db.coll.find({field: {$size: 2}})
+db.coll.find({results: {$elemMatch: {product: "xyz", score: {$gte: 8}}}})
+
+//2da parte
+//Projections
+db.coll.find({"x": 1}, {"actors": 1})
+db.coll.find({"x": 1}, {"actors": 1, "_id": 0})
+db.coll.find({"x": 1}, {"actors": 0, "summary": 0})
+
+//pagination
+db.coll.find({}).sort({"year": 1, "rating": -1}).skip(10).limit(3)

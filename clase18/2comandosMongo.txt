@@ -1,0 +1,11 @@
+db.coll.insertOne({name: "Max"})
+db.coll.insert([{name: "Max"}, {name: "Alex"}])
+db.coll.insert([{name: "Max"}, {name: "Alex"}], {ordered: false})
+db.coll.insert({date: ISODate()})
+db.coll.insert({name: "Max"}, {"writeConcern": {"w": "majority", "wtimeout": 5000}})
+
+db.coll.findOne()
+db.coll.find()
+db.coll.find().pretty()
+db.coll.find({name: "Max", age: 32})
+db.coll.find({date: ISODate("2022-09-25T13:57:17.180Z")})

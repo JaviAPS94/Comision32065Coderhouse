@@ -1,0 +1,2 @@
+db.coll.estimatedDocumentCount() // estimacion basada en el metadata de la coleccion
+db.coll.countDocuments({age: 32})

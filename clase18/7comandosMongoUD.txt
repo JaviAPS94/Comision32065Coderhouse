@@ -1,0 +1,6 @@
+db.coll.update({name: "Max"}, {$set: {name: "Test"}})
+db.coll.updateMany({name: "Max"}, {$set: {name: "Test"}})
+
+db.coll.deleteOne({name: "Max"})
+db.coll.deleteMany({name: "Max"})
+db.coll.deleteMany({})

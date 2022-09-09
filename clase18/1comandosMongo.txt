@@ -1,0 +1,22 @@
+db.coll.drop() //remove the collection and its index definitions
+db.dropDatabase() //double check
+
+db.createCollection("contacts")
+
+db.coll.stats() 
+//Returns statistics about the collection.
+
+db.coll.storageSize() 
+//The total amount of storage in bytes allocated to this collection for document storage.
+
+db.coll.totalIndexSize() 
+//The total size of all indexes for the collection.
+
+db.coll.totalSize() 
+//The total size in bytes of the data in the collection plus the size of every index on the collection.
+
+db.coll.validate({full: true}) 
+//Validates a collection. The method scans a collection data and indexes for correctness and returns the result.
+
+db.coll.renameCollection("new_coll", true) 
+// second parameter to drop the atrje collection if exists

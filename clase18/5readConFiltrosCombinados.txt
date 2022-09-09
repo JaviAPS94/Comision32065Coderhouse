@@ -1,0 +1,16 @@
+db.coll.find({name:{$not: {$eq: "Max"}}})
+db.coll.find({$or: [{"year": 1958},{"year": 1958}]})
+db.coll.find({$nor: [{price: 1.99},{sale: true}]})
+db.coll.find({
+    $and: [
+        {$or: [{qty: {$lt: 10}}, {qty: {$gt: 50}}]},
+        {$or: [{sale: true, {price: {$lt: 5}}]}
+    ]
+})
+
+
+//Element
+
+db.coll.find({name: {$exists: true}})
+db.coll.find({"zipCode": {$type: 2}})
+db.coll.find({"zipCode": {$type: "string"}})

@@ -1,0 +1,13 @@
+./bin/mongod --dbpath ./_data --auth
+
+use admin
+db.createUser("user": "root", "pwd": "rootpwd", "roles": ["root"])
+db.dropUser("root")
+
+db.createUser({"user": "lector", "pwd": "rootpwd", "roles": [{ "role": "read", "db": "testForRoles"}]})
+db.createUser({"user": "escritor", "pwd": "rootpwd", "roles": [{ role: "readWrite", db: "testForRoles"}]})
+
+
+
+./bin/mongosh -u lector
+./bin/mongosh -u escritor
