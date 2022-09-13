@@ -1,0 +1,37 @@
+λ mongo
+MongoDB shell version v4.4.4
+connecting to: mongodb://127.0.0.1:27017/?compressors=disabled&gssapiServiceName=mongodb
+Implicit session: session { "id" : UUID("83c62c87-f236-4df8-bf85-0b5c3d750f92") }
+MongoDB server version: 4.4.4
+---
+The server generated these startup warnings when booting:
+        2021-03-14T08:39:30.444-03:00: Access control is not enabled for the database. Read and write access to data and configuration is unrestricted
+        2021-03-14T08:39:30.444-03:00: This server is bound to localhost. Remote systems will be unable to connect to this server. Start the server with --bind_ip <addr
+ess> to specify which IP addresses it should serve responses from, or with --bind_ip_all to bind to all interfaces. If this behavior is desired, start the server with -
+-bind_ip 127.0.0.1 to disable this warning
+---
+---
+        Enable MongoDB's free cloud-based monitoring service, which will then receive and display
+        metrics about your deployment (disk utilization, CPU, operation statistics, etc).
+
+        The monitoring data will be available on a MongoDB website with a unique URL accessible to you
+        and anyone you share the URL with. MongoDB may use this information to make product
+        improvements and to suggest MongoDB products and deployment options to you.
+
+        To enable free monitoring, run the following command: db.enableFreeMonitoring()
+        To permanently disable this reminder, run the following command: db.disableFreeMonitoring()
+---
+> use colegio
+switched to db colegio
+> db.estudiantes.find()
+{ "_id" : ObjectId("604df61b5e39a84ba41313df"), "nombre" : "Lucas", "apellido" : "Blanco", "edad" : 22, "dni" : "30355874", "curso" : "3A", "nota" : 10, "__v" : 0 }
+{ "_id" : ObjectId("604df61b5e39a84ba41313e4"), "nombre" : "Fabio", "apellido" : "Pieres", "edad" : 39, "dni" : "4315388", "curso" : "1B", "nota" : 9, "__v" : 0 }
+{ "_id" : ObjectId("604df61b5e39a84ba41313dd"), "nombre" : "Ana", "apellido" : "Gonzalez", "edad" : 32, "dni" : "27651878", "curso" : "1A", "nota" : 8, "__v" : 0 }
+{ "_id" : ObjectId("604df61b5e39a84ba41313e1"), "nombre" : "Federico", "apellido" : "Perez", "edad" : 41, "dni" : "320118321", "curso" : "2A", "nota" : 5, "__v" : 0 }
+{ "_id" : ObjectId("604df61b5e39a84ba41313e5"), "nombre" : "Daniel", "apellido" : "Gallo", "edad" : 25, "dni" : "37923460", "curso" : "3B", "nota" : 2, "__v" : 0 }
+{ "_id" : ObjectId("604df61b5e39a84ba41313dc"), "nombre" : "Pedro", "apellido" : "Mei", "edad" : 21, "dni" : "31155898", "curso" : "1A", "nota" : 7, "__v" : 0 }
+{ "_id" : ObjectId("604df61b5e39a84ba41313e0"), "nombre" : "María", "apellido" : "García", "edad" : 36, "dni" : "29575148", "curso" : "1A", "nota" : 9, "__v" : 0 }
+{ "_id" : ObjectId("604df61b5e39a84ba41313e2"), "nombre" : "Tomas", "apellido" : "Sierra", "edad" : 19, "dni" : "38654790", "curso" : "2B", "nota" : 4, "__v" : 0 }
+{ "_id" : ObjectId("604df61b5e39a84ba41313de"), "nombre" : "José", "apellido" : "Picos", "edad" : 29, "dni" : "34554398", "curso" : "2A", "nota" : 6, "__v" : 0 }
+{ "_id" : ObjectId("604df61b5e39a84ba41313e3"), "nombre" : "Carlos", "apellido" : "Fernández", "edad" : 33, "dni" : "26935670", "curso" : "3B", "nota" : 2, "__v" : 0 }
+>
