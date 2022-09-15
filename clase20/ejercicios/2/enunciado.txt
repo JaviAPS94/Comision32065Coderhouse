@@ -1,0 +1,15 @@
+Desarrollar un proyecto en Node.js que realice la lectura de los estudiantes de la base colegio (creada anteriormente) mostrándolos en consola, cumpliendo con los siguientes puntos:
+
+1) Los estudiantes ordenados por orden alfabético según sus nombres.
+2) El estudiante más joven.
+3) Los estudiantes que pertenezcan al curso '2A'.
+4) El segundo estudiante más joven.
+5) Sólo los nombres y apellidos de los estudiantes con su curso correspondiente, ordenados por apellido descendente (z a a).
+6) Los estudiantes que sacaron 10.
+7) El promedio de notas del total de alumnos.
+8) El promedio de notas del curso '1A'.
+
+Utilizar la interface basada en Promises de Mongoose, sintaxis then/catch con importación de módulos en formato CommonJS.
+
+Los resultados se deben imprimir en orden según los puntos citados (Promesas anidadas con .then)
+
