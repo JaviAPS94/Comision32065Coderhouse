@@ -1,0 +1,5 @@
+{
+  "dependencies": {
+    "faker": "^5.4.0"
+  }
+}
