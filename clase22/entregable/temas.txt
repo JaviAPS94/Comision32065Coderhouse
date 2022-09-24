@@ -1,0 +1,3 @@
+faker.commerce.product();
+faker.commerce.price();
+faker.image.imageUrl();
