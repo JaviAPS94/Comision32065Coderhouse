@@ -22,16 +22,6 @@ app.get('/login', (req, res) => {
     res.send('Login sucess!!');
 });
 
-// app.get('/session', (req, res) => {
-//     if(req.session.contador) {
-//         req.session.contador++;
-//         res.send(`Ud ha vistado el sitio ${req.session.contador} veces.`)
-//     } else {
-//         req.session.contador = 1;
-//         res.send('Bienvenido');
-//     }
-// });
-
 function auth(req, res, next) {
     if (req.session?.user === 'alex' && req.session?.admin) {
         return next();
