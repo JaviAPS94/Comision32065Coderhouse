@@ -1,0 +1,26 @@
+{
+  "type": "module",
+  "name": "entregable",
+  "version": "1.0.0",
+  "description": "",
+  "main": "src/main.js",
+  "scripts": {
+    "start": "node src/main.js",
+    "watch": "nodemon src/main.js -e ejs,html,js,json"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "connect-mongo": "^4.5.0",
+    "ejs": "^3.1.6",
+    "express": "^4.17.1",
+    "express-session": "^1.17.2",
+    "faker": "^5.5.3",
+    "knex": "^0.95.9",
+    "mysql": "^2.18.1",
+    "nodemon": "^2.0.12",
+    "normalizr": "^3.6.1",
+    "socket.io": "^4.1.3"
+  }
+}
