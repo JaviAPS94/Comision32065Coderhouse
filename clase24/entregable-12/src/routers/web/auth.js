@@ -18,7 +18,8 @@ authWebRouter.get('/logout', (req, res) => {
 
 
 authWebRouter.post('/login', (req, res) => {
-    
+    req.session.nombre = req.body.nombre;
+    res.redirect('/home');
 })
 
 

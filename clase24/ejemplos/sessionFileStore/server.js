@@ -8,7 +8,7 @@ app.use(session({
     store: new FileStore(
         {
             path: './sesiones',
-            ttl: 300,
+            ttl: 10,
             retries: 3
         }
     ),
