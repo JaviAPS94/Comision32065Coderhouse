@@ -35,7 +35,7 @@ passport.use('signup', new LocalStrategy({
             };
 
             User.create(newUser, (err, userWithId) => {
-                if(err) {
+                if (err) {
                     return done(err);
                 }
                 return done(null, userWithId);
@@ -51,11 +51,11 @@ passport.use('login', new LocalStrategy(
                 return done(err);
             }
 
-            if(!user) {
+            if (!user) {
                 return done(null, false);
             }
 
-            if(!isValidPassword(user, password)) {
+            if (!isValidPassword(user, password)) {
                 return done(null, false);
             }
 
@@ -80,6 +80,7 @@ function isValidPassword(user, password) {
     return bCrypt.compareSync(password, user.password);
 }
 
+const app = express();
 
 app.engine('.hbs', exphbs({ extname: '.hbs', defaultLayout: 'main.hbs' }));
 app.set('view engine', '.hbs');
@@ -102,20 +103,48 @@ app.use(passport.session());
 
 //LOGIN
 app.get('/login', routes.getLogin);
-app.post('/login', passport.authenticate('login', { 
-    failureRedirect: '/faillogin' 
+app.post('/login', passport.authenticate('login', {
+    failureRedirect: '/faillogin'
 }), routes.postLogin);
 app.get('/faillogin', routes.getFailLogin);
 
 //SIGNUP
 app.get('/signup', routes.getSignUp);
-app.post('/signup', passport.authenticate('signup', { 
-    failureRedirect: '/failsignup' 
+app.post('/signup', passport.authenticate('signup', {
+    failureRedirect: '/failsignup'
 }), routes.postSignup);
 app.get('/failsignup', routes.getFailsignup);
+
+//Last part
+function checkAuthentication(req, res, next) {
+    if (req.isAuthenticated()) {
+        next();
+    } else {
+        res.redirect("/login");
+    }
+}
+
+app.get('/ruta-protegida', checkAuthentication, (req, res) => {
+    const { user } = req;
+    console.log(user);
+    res.send('<h1>Ruta OK!</h1>');
+});
 
 //LOGOUT
 app.get('/logout', routes.getLogout);
 
 
 
+// ------------------------------------------------------------------------------
+//  LISTEN SERVER
+// ------------------------------------------------------------------------------
+controllersdb.conectarDB(config.URL_BASE_DE_DATOS, err => {
+
+    if (err) return console.log('error en conexión de base de datos', err);
+    console.log('BASE DE DATOS CONECTADA');
+
+    app.listen(8081, (err) => {
+        if (err) return console.log('error en listen server', err);
+        console.log(`Server running on port 8081`);
+    });
+});
