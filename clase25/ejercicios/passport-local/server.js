@@ -93,6 +93,7 @@ app.use(session({
     secret: 'secret',
     resave: false,
     saveUninitialized: false,
+    rolling: true,
     cookie: {
         maxAge: config.TIEMPO_EXPIRACION
     }
