@@ -1,0 +1,8 @@
+[2022-10-24T19:51:27.319] [INFO] archivo2 - Log info
+[2022-10-24T19:51:27.321] [WARN] archivo2 - Log warn
+[2022-10-24T19:51:27.321] [ERROR] archivo2 - Log error
+[2022-10-24T19:51:27.321] [FATAL] archivo2 - Log fatal
+[2022-10-24T19:53:12.260] [INFO] archivo2 - Log info
+[2022-10-24T19:53:12.266] [WARN] archivo2 - Log warn
+[2022-10-24T19:53:12.266] [ERROR] archivo2 - Log error
+[2022-10-24T19:53:12.266] [FATAL] archivo2 - Log fatal

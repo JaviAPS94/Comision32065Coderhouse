@@ -1,0 +1,9 @@
+[2022-10-24T20:15:21.793] [INFO] prod - Server running
+[2022-10-24T20:15:32.409] [ERROR] prod - Parámetros incorrectos para la suma
+[2022-10-24T20:15:55.026] [INFO] prod - Parámetros 5 y 10 correctos para la suma
+[2022-10-24T20:16:40.299] [INFO] prod - Server running
+[2022-10-24T20:16:43.103] [INFO] prod - Parámetros 5 y 10 correctos para la suma
+{"level":"info","message":"Server running"}
+{"level":"info","message":"Parámetros 5 y 10 correctos para la suma"}
+{"level":"info","message":"Server running"}
+{"level":"error","message":"Parámetros incorrectos para la suma"}
