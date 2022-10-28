@@ -1,5 +1,6 @@
 // const log4js = require('log4js');
-const winston = require('winston');
+// const winston = require('winston');
+const pino = require('pino');
 
 // silly 6
 // debug 5
@@ -33,26 +34,43 @@ const winston = require('winston');
 
 // WINSTON
 
+// function buildProdLogger() {
+//     const prodLogger = winston.createLogger({
+//         transports: [
+//             new winston.transports.File({ filename: 'debug.log', level: 'debug' }),
+//             new winston.transports.File({ filename: 'errores.log', level: 'error' }),
+//         ]
+//     });
+//     return prodLogger;
+// }
+
+// function buildDevLogger() {
+//     const devLogger = winston.createLogger({
+//         transports: [
+//             new winston.transports.Console({ level: 'info' })
+//         ]
+//     });
+//     return devLogger;
+// }
+
+// const logger = (process.env.NODE_ENV === 'PROD') ?
+//     buildProdLogger() : buildDevLogger();
+
+//PINO
+
 function buildProdLogger() {
-    const prodLogger = winston.createLogger({
-        transports: [
-            new winston.transports.File({ filename: 'debug.log', level: 'debug' }),
-            new winston.transports.File({ filename: 'errores.log', level: 'error' }),
-        ]
-    });
+    const prodLogger = pino('debug.log');
+    prodLogger.level = 'debug';
     return prodLogger;
 }
 
 function buildDevLogger() {
-    const devLogger = winston.createLogger({
-        transports: [
-            new winston.transports.Console({ level: 'info' })
-        ]
-    });
+    const devLogger = pino();
+    devLogger.level = 'info';
     return devLogger;
 }
 
 const logger = (process.env.NODE_ENV === 'PROD') ?
-    buildProdLogger() : buildDevLogger();
+     buildProdLogger() : buildDevLogger();
 
 module.exports = logger;

@@ -1,0 +1,104 @@
+Statistical profiling result from bloq-v8.log, (22127 ticks, 5 unaccounted, 0 excluded).
+
+ [Shared libraries]:
+   ticks  total  nonlib   name
+     32    0.1%          /usr/lib/system/libsystem_pthread.dylib
+     28    0.1%          /usr/lib/system/libsystem_c.dylib
+     13    0.1%          /usr/lib/system/libsystem_platform.dylib
+     11    0.0%          /usr/lib/libc++.1.dylib
+      8    0.0%          /usr/lib/system/libsystem_malloc.dylib
+      8    0.0%          /usr/lib/system/libsystem_kernel.dylib
+      2    0.0%          /usr/lib/system/libdyld.dylib
+      1    0.0%          /usr/lib/libc++abi.dylib
+
+ [JavaScript]:
+   ticks  total  nonlib   name
+      2    0.0%    0.0%  LazyCompile: *nextTick node:internal/process/task_queues:104:18
+      1    0.0%    0.0%  RegExp: [!@#$%^&*]
+      1    0.0%    0.0%  LazyCompile: *normalizeString node:path:66:25
+      1    0.0%    0.0%  LazyCompile: *next /Volumes/Datos/Coderhouse/Comision32065Coderhouse/clase32/ejemplos/nodeProfiler/node_modules/express/lib/router/index.js:177:16
+      1    0.0%    0.0%  Function: ^writeHead node:_http_server:292:19
+      1    0.0%    0.0%  Function: ^write node:buffer:598:12
+      1    0.0%    0.0%  Function: ^socketListenerWrap node:_http_server:1030:37
+      1    0.0%    0.0%  Function: ^sendStatus /Volumes/Datos/Coderhouse/Comision32065Coderhouse/clase32/ejemplos/nodeProfiler/node_modules/express/lib/response.js:369:37
+      1    0.0%    0.0%  Function: ^resume_ node:internal/streams/readable:984:17
+      1    0.0%    0.0%  Function: ^openSync node:fs:585:18
+      1    0.0%    0.0%  Function: ^onDestroy node:internal/streams/destroy:73:21
+      1    0.0%    0.0%  Function: ^next /Volumes/Datos/Coderhouse/Comision32065Coderhouse/clase32/ejemplos/nodeProfiler/node_modules/send/index.js:728:17
+      1    0.0%    0.0%  Function: ^isstats /Volumes/Datos/Coderhouse/Comision32065Coderhouse/clase32/ejemplos/nodeProfiler/node_modules/etag/index.js:104:18
+      1    0.0%    0.0%  Function: ^handle /Volumes/Datos/Coderhouse/Comision32065Coderhouse/clase32/ejemplos/nodeProfiler/node_modules/express/lib/router/index.js:136:31
+      1    0.0%    0.0%  Function: ^from node:buffer:301:28
+      1    0.0%    0.0%  Function: ^_flushOutput node:_http_outgoing:1030:63
+      1    0.0%    0.0%  Function: ^_destroy node:_http_incoming:221:55
+      1    0.0%    0.0%  Function: ^Socket.resume node:net:691:35
+
+ [C++]:
+   ticks  total  nonlib   name
+  21713   98.1%   98.6%  t node::options_parser::OptionsParser<node::PerIsolateOptions>::Parse(std::__1::vector<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::allocator<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > > >*, std::__1::vector<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::allocator<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > > >*, std::__1::vector<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::allocator<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > > >*, node::PerIsolateOptions*, node::OptionEnvvarSettings, std::__1::vector<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::allocator<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > > >*) const
+     99    0.4%    0.4%  T node::native_module::NativeModuleEnv::CompileFunction(v8::FunctionCallbackInfo<v8::Value> const&)
+     44    0.2%    0.2%  T node::contextify::ContextifyContext::CompileFunction(v8::FunctionCallbackInfo<v8::Value> const&)
+     26    0.1%    0.1%  t node::fs::Read(v8::FunctionCallbackInfo<v8::Value> const&)
+     24    0.1%    0.1%  T _host_request_notification
+     20    0.1%    0.1%  T __kernelrpc_mach_port_get_context
+     18    0.1%    0.1%  t node::fs::InternalModuleReadJSON(v8::FunctionCallbackInfo<v8::Value> const&)
+      9    0.0%    0.0%  T _host_get_special_port
+      8    0.0%    0.0%  t node::fs::InternalModuleStat(v8::FunctionCallbackInfo<v8::Value> const&)
+      4    0.0%    0.0%  t node::fs::Stat(v8::FunctionCallbackInfo<v8::Value> const&)
+      3    0.0%    0.0%  t std::__1::ostreambuf_iterator<char, std::__1::char_traits<char> > std::__1::__pad_and_output<char, std::__1::char_traits<char> >(std::__1::ostreambuf_iterator<char, std::__1::char_traits<char> >, char const*, char const*, char const*, std::__1::ios_base&, char)
+      3    0.0%    0.0%  t node::fs::Open(v8::FunctionCallbackInfo<v8::Value> const&)
+      3    0.0%    0.0%  T node::fs::NewFSReqCallback(v8::FunctionCallbackInfo<v8::Value> const&)
+      3    0.0%    0.0%  T _mig_strncpy_zerofill
+      3    0.0%    0.0%  T _mach_get_times
+      2    0.0%    0.0%  t std::__1::basic_ostream<char, std::__1::char_traits<char> >& std::__1::__put_character_sequence<char, std::__1::char_traits<char> >(std::__1::basic_ostream<char, std::__1::char_traits<char> >&, char const*, unsigned long)
+      2    0.0%    0.0%  T node::binding::GetInternalBinding(v8::FunctionCallbackInfo<v8::Value> const&)
+      2    0.0%    0.0%  T node::AsyncWrap::EmitAfter(node::Environment*, double)
+      1    0.0%    0.0%  t non-virtual thunk to node::(anonymous namespace)::Parser::OnStreamAlloc(unsigned long)
+      1    0.0%    0.0%  t node::fs::LStat(v8::FunctionCallbackInfo<v8::Value> const&)
+      1    0.0%    0.0%  t node::fs::FStat(v8::FunctionCallbackInfo<v8::Value> const&)
+      1    0.0%    0.0%  t node::NonOwningExternalTwoByteResource::length() const
+      1    0.0%    0.0%  t node::Buffer::(anonymous namespace)::ByteLengthUtf8(v8::FunctionCallbackInfo<v8::Value> const&)
+      1    0.0%    0.0%  t node::(anonymous namespace)::Parser::New(v8::FunctionCallbackInfo<v8::Value> const&)
+      1    0.0%    0.0%  t node::(anonymous namespace)::Parser::Initialize(v8::FunctionCallbackInfo<v8::Value> const&)
+      1    0.0%    0.0%  T node::loader::ModuleWrap::New(v8::FunctionCallbackInfo<v8::Value> const&)
+      1    0.0%    0.0%  T node::UVException(v8::Isolate*, int, char const*, char const*, char const*, char const*)
+      1    0.0%    0.0%  T node::AsyncWrap::EmitTraceEventBefore()
+      1    0.0%    0.0%  T node::AsyncWrap::EmitTraceEventAfter(node::AsyncWrap::ProviderType, double)
+      1    0.0%    0.0%  T _open_dprotected_np
+      1    0.0%    0.0%  T _mach_vm_deallocate
+      1    0.0%    0.0%  T _mach_msg_destroy
+
+ [Summary]:
+   ticks  total  nonlib   name
+     19    0.1%    0.1%  JavaScript
+  22000   99.4%   99.9%  C++
+     40    0.2%    0.2%  GC
+    103    0.5%          Shared libraries
+      5    0.0%          Unaccounted
+
+ [C++ entry points]:
+   ticks    cpp   total   name
+  21968  100.0%   99.3%  TOTAL
+
+ [Bottom up (heavy) profile]:
+  Note: percentage shows a share of a particular caller in the total
+  amount of its parent calls.
+  Callers occupying less than 1.0% are not shown.
+
+   ticks parent  name
+  21713   98.1%  t node::options_parser::OptionsParser<node::PerIsolateOptions>::Parse(std::__1::vector<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::allocator<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > > >*, std::__1::vector<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::allocator<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > > >*, std::__1::vector<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::allocator<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > > >*, node::PerIsolateOptions*, node::OptionEnvvarSettings, std::__1::vector<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::allocator<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > > >*) const
+  21522   99.1%    t node::options_parser::OptionsParser<node::PerIsolateOptions>::Parse(std::__1::vector<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::allocator<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > > >*, std::__1::vector<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::allocator<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > > >*, std::__1::vector<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::allocator<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > > >*, node::PerIsolateOptions*, node::OptionEnvvarSettings, std::__1::vector<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::allocator<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > > >*) const
+  20958   97.4%      Function: ^pbkdf2Sync node:internal/crypto/pbkdf2:68:20
+  20877   99.6%        Function: ^<anonymous> /Volumes/Datos/Coderhouse/Comision32065Coderhouse/clase32/ejemplos/nodeProfiler/server.js:32:23
+  20877  100.0%          Function: ^handle /Volumes/Datos/Coderhouse/Comision32065Coderhouse/clase32/ejemplos/nodeProfiler/node_modules/express/lib/router/layer.js:86:49
+  20628   98.8%            Function: ^next /Volumes/Datos/Coderhouse/Comision32065Coderhouse/clase32/ejemplos/nodeProfiler/node_modules/express/lib/router/route.js:116:16
+    249    1.2%            LazyCompile: ~next /Volumes/Datos/Coderhouse/Comision32065Coderhouse/clase32/ejemplos/nodeProfiler/node_modules/express/lib/router/route.js:116:16
+    389    1.8%      LazyCompile: ~pbkdf2Sync node:internal/crypto/pbkdf2:68:20
+    345   88.7%        LazyCompile: ~<anonymous> /Volumes/Datos/Coderhouse/Comision32065Coderhouse/clase32/ejemplos/nodeProfiler/server.js:32:23
+    255   73.9%          Function: ^handle /Volumes/Datos/Coderhouse/Comision32065Coderhouse/clase32/ejemplos/nodeProfiler/node_modules/express/lib/router/layer.js:86:49
+    255  100.0%            LazyCompile: ~next /Volumes/Datos/Coderhouse/Comision32065Coderhouse/clase32/ejemplos/nodeProfiler/node_modules/express/lib/router/route.js:116:16
+     90   26.1%          LazyCompile: ~handle /Volumes/Datos/Coderhouse/Comision32065Coderhouse/clase32/ejemplos/nodeProfiler/node_modules/express/lib/router/layer.js:86:49
+     90  100.0%            LazyCompile: ~next /Volumes/Datos/Coderhouse/Comision32065Coderhouse/clase32/ejemplos/nodeProfiler/node_modules/express/lib/router/route.js:116:16
+     44   11.3%        LazyCompile: ~<anonymous> /Volumes/Datos/Coderhouse/Comision32065Coderhouse/clase32/ejemplos/nodeProfiler/server.js:14:21
+     44  100.0%          LazyCompile: ~handle /Volumes/Datos/Coderhouse/Comision32065Coderhouse/clase32/ejemplos/nodeProfiler/node_modules/express/lib/router/layer.js:86:49
+     44  100.0%            LazyCompile: ~next /Volumes/Datos/Coderhouse/Comision32065Coderhouse/clase32/ejemplos/nodeProfiler/node_modules/express/lib/router/route.js:116:16
+

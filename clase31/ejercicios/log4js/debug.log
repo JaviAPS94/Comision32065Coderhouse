@@ -7,3 +7,8 @@
 {"level":"info","message":"Parámetros 5 y 10 correctos para la suma"}
 {"level":"info","message":"Server running"}
 {"level":"error","message":"Parámetros incorrectos para la suma"}
+{"level":30,"time":1666828197169,"pid":37785,"hostname":"Alexs-MacBook-Pro.local","msg":"Server running"}
+{"level":30,"time":1666828223572,"pid":37785,"hostname":"Alexs-MacBook-Pro.local","msg":"Parámetros 5 y 10 correctos para la suma"}
+{"level":50,"time":1666828227851,"pid":37785,"hostname":"Alexs-MacBook-Pro.local","msg":"Parámetros incorrectos para la suma"}
+{"level":50,"time":1666828235375,"pid":37785,"hostname":"Alexs-MacBook-Pro.local","msg":"Parámetros incorrectos para la suma"}
+{"level":40,"time":1666828237460,"pid":37785,"hostname":"Alexs-MacBook-Pro.local","msg":"Ruta no implementada"}

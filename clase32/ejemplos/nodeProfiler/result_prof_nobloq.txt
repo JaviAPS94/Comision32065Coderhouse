@@ -1,0 +1,645 @@
+Statistical profiling result from nobloq-v8.log, (2131 ticks, 12 unaccounted, 0 excluded).
+
+ [Shared libraries]:
+   ticks  total  nonlib   name
+     43    2.0%          /usr/lib/system/libsystem_pthread.dylib
+     35    1.6%          /usr/lib/system/libsystem_c.dylib
+     19    0.9%          /usr/lib/system/libsystem_platform.dylib
+     16    0.8%          /usr/lib/libc++.1.dylib
+     14    0.7%          /usr/lib/system/libsystem_malloc.dylib
+     14    0.7%          /usr/lib/system/libsystem_kernel.dylib
+      2    0.1%          /usr/lib/libc++abi.dylib
+
+ [JavaScript]:
+   ticks  total  nonlib   name
+      3    0.1%    0.2%  LazyCompile: *normalizeString node:path:66:25
+      2    0.1%    0.1%  Function: ^parserOnIncoming node:_http_server:880:26
+      2    0.1%    0.1%  Function: ^EventEmitter.init node:events:337:29
+      1    0.0%    0.1%  Function: ^setHeader node:_http_outgoing:601:57
+      1    0.0%    0.1%  Function: ^normalizeString node:path:66:25
+      1    0.0%    0.1%  Function: ^lookup /Volumes/Datos/Coderhouse/Comision32065Coderhouse/clase32/ejemplos/nodeProfiler/node_modules/mime/mime.js:102:19
+      1    0.0%    0.1%  Function: ^join node:path:1166:7
+      1    0.0%    0.1%  Function: ^header /Volumes/Datos/Coderhouse/Comision32065Coderhouse/clase32/ejemplos/nodeProfiler/node_modules/express/lib/response.js:777:29
+      1    0.0%    0.1%  Function: ^getDefaultTriggerAsyncId node:internal/async_hooks:432:34
+      1    0.0%    0.1%  Function: ^construct node:internal/streams/destroy:225:19
+      1    0.0%    0.1%  Function: ^clearBuffer node:internal/streams/writable:531:21
+      1    0.0%    0.1%  Function: ^_addListener node:events:541:22
+      1    0.0%    0.1%  Function: ^SafeMap node:internal/per_context/primordials:366:16
+      1    0.0%    0.1%  Function: ^IncomingMessage node:_http_incoming:53:25
+      1    0.0%    0.1%  Function: ^<anonymous> /Volumes/Datos/Coderhouse/Comision32065Coderhouse/clase32/ejemplos/nodeProfiler/server.js:66:73
+
+ [C++]:
+   ticks  total  nonlib   name
+    948   44.5%   47.7%  T __kernelrpc_mach_port_get_context
+    574   26.9%   28.9%  t node::options_parser::OptionsParser<node::PerIsolateOptions>::Parse(std::__1::vector<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::allocator<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > > >*, std::__1::vector<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::allocator<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > > >*, std::__1::vector<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::allocator<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > > >*, node::PerIsolateOptions*, node::OptionEnvvarSettings, std::__1::vector<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::allocator<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > > >*) const
+    150    7.0%    7.5%  T node::native_module::NativeModuleEnv::CompileFunction(v8::FunctionCallbackInfo<v8::Value> const&)
+     69    3.2%    3.5%  T node::contextify::ContextifyContext::CompileFunction(v8::FunctionCallbackInfo<v8::Value> const&)
+     55    2.6%    2.8%  T _host_request_notification
+     32    1.5%    1.6%  t node::fs::Read(v8::FunctionCallbackInfo<v8::Value> const&)
+     28    1.3%    1.4%  t node::fs::InternalModuleReadJSON(v8::FunctionCallbackInfo<v8::Value> const&)
+     26    1.2%    1.3%  T _host_get_special_port
+     12    0.6%    0.6%  t void node::Buffer::(anonymous namespace)::StringSlice<(node::encoding)1>(v8::FunctionCallbackInfo<v8::Value> const&)
+      9    0.4%    0.5%  T _mig_strncpy_zerofill
+      8    0.4%    0.4%  t std::__1::basic_ostream<char, std::__1::char_traits<char> >& std::__1::__put_character_sequence<char, std::__1::char_traits<char> >(std::__1::basic_ostream<char, std::__1::char_traits<char> >&, char const*, unsigned long)
+      4    0.2%    0.2%  t std::__1::ostreambuf_iterator<char, std::__1::char_traits<char> > std::__1::__pad_and_output<char, std::__1::char_traits<char> >(std::__1::ostreambuf_iterator<char, std::__1::char_traits<char> >, char const*, char const*, char const*, std::__1::ios_base&, char)
+      4    0.2%    0.2%  t node::fs::Open(v8::FunctionCallbackInfo<v8::Value> const&)
+      4    0.2%    0.2%  t node::fs::InternalModuleStat(v8::FunctionCallbackInfo<v8::Value> const&)
+      4    0.2%    0.2%  T node::AsyncWrap::EmitTraceEventBefore()
+      4    0.2%    0.2%  T _mach_msg_destroy
+      3    0.1%    0.2%  T node::binding::GetInternalBinding(v8::FunctionCallbackInfo<v8::Value> const&)
+      2    0.1%    0.1%  t node::(anonymous namespace)::Parser::Initialize(v8::FunctionCallbackInfo<v8::Value> const&)
+      2    0.1%    0.1%  T node::fs::NewFSReqCallback(v8::FunctionCallbackInfo<v8::Value> const&)
+      2    0.1%    0.1%  T node::fs::Close(v8::FunctionCallbackInfo<v8::Value> const&)
+      2    0.1%    0.1%  T node::InternalCallbackScope::Close()
+      2    0.1%    0.1%  T _mach_get_times
+      1    0.0%    0.1%  t void node::Buffer::(anonymous namespace)::StringSlice<(node::encoding)2>(v8::FunctionCallbackInfo<v8::Value> const&)
+      1    0.0%    0.1%  t node::fs::Stat(v8::FunctionCallbackInfo<v8::Value> const&)
+      1    0.0%    0.1%  t node::fs::LStat(v8::FunctionCallbackInfo<v8::Value> const&)
+      1    0.0%    0.1%  t node::EnvGetter(v8::Local<v8::Name>, v8::PropertyCallbackInfo<v8::Value> const&)
+      1    0.0%    0.1%  t node::CustomBufferJSListener::OnStreamDestroy()
+      1    0.0%    0.1%  t node::Buffer::(anonymous namespace)::GetZeroFillToggle(v8::FunctionCallbackInfo<v8::Value> const&)
+      1    0.0%    0.1%  T node::fs::AfterStat(uv_fs_s*)
+      1    0.0%    0.1%  T node::InternalMakeCallback(node::Environment*, v8::Local<v8::Object>, v8::Local<v8::Object>, v8::Local<v8::Function>, int, v8::Local<v8::Value>*, node::async_context)
+      1    0.0%    0.1%  T node::InternalCallbackScope::InternalCallbackScope(node::AsyncWrap*, int)
+      1    0.0%    0.1%  T node::AsyncWrap::EmitTraceEventDestroy()
+      1    0.0%    0.1%  T _task_restartable_ranges_register
+      1    0.0%    0.1%  T _task_policy_set
+      1    0.0%    0.1%  T _mach_vm_map
+
+ [Summary]:
+   ticks  total  nonlib   name
+     19    0.9%    1.0%  JavaScript
+   1957   91.8%   98.4%  C++
+     82    3.8%    4.1%  GC
+    143    6.7%          Shared libraries
+     12    0.6%          Unaccounted
+
+ [C++ entry points]:
+   ticks    cpp   total   name
+    944  100.0%   44.3%  TOTAL
+
+ [Bottom up (heavy) profile]:
+  Note: percentage shows a share of a particular caller in the total
+  amount of its parent calls.
+  Callers occupying less than 1.0% are not shown.
+
+   ticks parent  name
+    948   44.5%  T __kernelrpc_mach_port_get_context
+
+    574   26.9%  t node::options_parser::OptionsParser<node::PerIsolateOptions>::Parse(std::__1::vector<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::allocator<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > > >*, std::__1::vector<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::allocator<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > > >*, std::__1::vector<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::allocator<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > > >*, node::PerIsolateOptions*, node::OptionEnvvarSettings, std::__1::vector<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::allocator<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > > >*) const
+    295   51.4%    t node::options_parser::OptionsParser<node::PerIsolateOptions>::Parse(std::__1::vector<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::allocator<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > > >*, std::__1::vector<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::allocator<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > > >*, std::__1::vector<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::allocator<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > > >*, node::PerIsolateOptions*, node::OptionEnvvarSettings, std::__1::vector<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::allocator<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > > >*) const
+     65   22.0%      LazyCompile: ~pbkdf2Sync node:internal/crypto/pbkdf2:68:20
+     65  100.0%        LazyCompile: ~<anonymous> /Volumes/Datos/Coderhouse/Comision32065Coderhouse/clase32/ejemplos/nodeProfiler/server.js:14:21
+     65  100.0%          LazyCompile: ~handle /Volumes/Datos/Coderhouse/Comision32065Coderhouse/clase32/ejemplos/nodeProfiler/node_modules/express/lib/router/layer.js:86:49
+     65  100.0%            LazyCompile: ~next /Volumes/Datos/Coderhouse/Comision32065Coderhouse/clase32/ejemplos/nodeProfiler/node_modules/express/lib/router/route.js:116:16
+     26    8.8%      t node::options_parser::OptionsParser<node::PerIsolateOptions>::Parse(std::__1::vector<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::allocator<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > > >*, std::__1::vector<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::allocator<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > > >*, std::__1::vector<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::allocator<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > > >*, node::PerIsolateOptions*, node::OptionEnvvarSettings, std::__1::vector<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::allocator<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > > >*) const
+      4   15.4%        LazyCompile: ~resolvePackageTargetString node:internal/modules/esm/resolve:499:36
+      4  100.0%          LazyCompile: ~resolvePackageTarget node:internal/modules/esm/resolve:567:30
+      4  100.0%            LazyCompile: ~resolvePackageTarget node:internal/modules/esm/resolve:567:30
+      4   15.4%        Function: ^header /Volumes/Datos/Coderhouse/Comision32065Coderhouse/clase32/ejemplos/nodeProfiler/node_modules/express/lib/response.js:777:29
+      4  100.0%          Function: ^contentType /Volumes/Datos/Coderhouse/Comision32065Coderhouse/clase32/ejemplos/nodeProfiler/node_modules/express/lib/response.js:619:32
+      4  100.0%            Function: ^sendStatus /Volumes/Datos/Coderhouse/Comision32065Coderhouse/clase32/ejemplos/nodeProfiler/node_modules/express/lib/response.js:369:37
+      3   11.5%        LazyCompile: ~Module._findPath node:internal/modules/cjs/loader:505:28
+      2   66.7%          LazyCompile: ~resolveMainPath node:internal/modules/run_main:15:25
+      2  100.0%            LazyCompile: ~executeUserEntryPoint node:internal/modules/run_main:74:31
+      1   33.3%          LazyCompile: ~Module._resolveFilename node:internal/modules/cjs/loader:865:35
+      1  100.0%            LazyCompile: ~Module._load node:internal/modules/cjs/loader:771:24
+      3   11.5%        Function: ^parseQueryStringValues /Volumes/Datos/Coderhouse/Comision32065Coderhouse/clase32/ejemplos/nodeProfiler/node_modules/qs/lib/parse.js:51:50
+      3  100.0%          Function: ^module.exports /Volumes/Datos/Coderhouse/Comision32065Coderhouse/clase32/ejemplos/nodeProfiler/node_modules/qs/lib/parse.js:239:27
+      3  100.0%            Function: ^parseExtendedQueryString /Volumes/Datos/Coderhouse/Comision32065Coderhouse/clase32/ejemplos/nodeProfiler/node_modules/express/lib/utils.js:289:34
+      2    7.7%        LazyCompile: ~<anonymous> /Volumes/Datos/Coderhouse/Comision32065Coderhouse/clase32/ejemplos/nodeProfiler/node_modules/debug/src/node.js:34:64
+      2  100.0%          t node::options_parser::OptionsParser<node::PerIsolateOptions>::Parse(std::__1::vector<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::allocator<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > > >*, std::__1::vector<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::allocator<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > > >*, std::__1::vector<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::allocator<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > > >*, node::PerIsolateOptions*, node::OptionEnvvarSettings, std::__1::vector<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::allocator<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > > >*) const
+      2  100.0%            Function: ~<anonymous> /Volumes/Datos/Coderhouse/Comision32065Coderhouse/clase32/ejemplos/nodeProfiler/node_modules/debug/src/node.js:1:1
+      1    3.8%        LazyCompile: ~resolveExports node:internal/modules/cjs/loader:483:24
+      1  100.0%          LazyCompile: ~Module._findPath node:internal/modules/cjs/loader:505:28
+      1  100.0%            LazyCompile: ~Module._resolveFilename node:internal/modules/cjs/loader:865:35
+      1    3.8%        LazyCompile: ~pathtoRegexp /Volumes/Datos/Coderhouse/Comision32065Coderhouse/clase32/ejemplos/nodeProfiler/node_modules/path-to-regexp/index.js:28:22
+      1  100.0%          LazyCompile: ~Layer /Volumes/Datos/Coderhouse/Comision32065Coderhouse/clase32/ejemplos/nodeProfiler/node_modules/express/lib/router/layer.js:33:15
+      1  100.0%            LazyCompile: ~use /Volumes/Datos/Coderhouse/Comision32065Coderhouse/clase32/ejemplos/nodeProfiler/node_modules/express/lib/router/index.js:439:25
+      1    3.8%        LazyCompile: ~header /Volumes/Datos/Coderhouse/Comision32065Coderhouse/clase32/ejemplos/nodeProfiler/node_modules/express/lib/response.js:777:29
+      1  100.0%          LazyCompile: ~contentType /Volumes/Datos/Coderhouse/Comision32065Coderhouse/clase32/ejemplos/nodeProfiler/node_modules/express/lib/response.js:619:32
+      1  100.0%            LazyCompile: ~sendStatus /Volumes/Datos/Coderhouse/Comision32065Coderhouse/clase32/ejemplos/nodeProfiler/node_modules/express/lib/response.js:369:37
+      1    3.8%        LazyCompile: ~enable /Volumes/Datos/Coderhouse/Comision32065Coderhouse/clase32/ejemplos/nodeProfiler/node_modules/debug/src/debug.js:138:16
+      1  100.0%          Function: ~<anonymous> /Volumes/Datos/Coderhouse/Comision32065Coderhouse/clase32/ejemplos/nodeProfiler/node_modules/debug/src/node.js:1:1
+      1  100.0%            LazyCompile: ~Module._compile node:internal/modules/cjs/loader:1080:37
+      1    3.8%        LazyCompile: ~deprecate node:internal/util:96:19
+      1  100.0%          Function: ~<anonymous> node:_http_outgoing:1:1
+      1  100.0%            Function: ^compileForInternalLoader node:internal/bootstrap/loaders:316:27
+      1    3.8%        Function: ~<anonymous> node:internal/net:1:1
+      1  100.0%          LazyCompile: ~compileForInternalLoader node:internal/bootstrap/loaders:316:27
+      1  100.0%            Function: ^nativeModuleRequire node:internal/bootstrap/loaders:349:29
+      1    3.8%        Function: ^pipe /Volumes/Datos/Coderhouse/Comision32065Coderhouse/clase32/ejemplos/nodeProfiler/node_modules/send/index.js:506:43
+      1  100.0%          Function: ^serveStatic /Volumes/Datos/Coderhouse/Comision32065Coderhouse/clase32/ejemplos/nodeProfiler/node_modules/serve-static/index.js:72:31
+      1  100.0%            Function: ^handle /Volumes/Datos/Coderhouse/Comision32065Coderhouse/clase32/ejemplos/nodeProfiler/node_modules/express/lib/router/layer.js:86:49
+      1    3.8%        Function: ^getOwn node:internal/bootstrap/loaders:187:16
+      1  100.0%          Function: ^syncExports node:internal/bootstrap/loaders:304:14
+      1  100.0%            LazyCompile: ~<anonymous> node:internal/bootstrap/loaders:290:15
+      1    3.8%        Function: ^expressInit /Volumes/Datos/Coderhouse/Comision32065Coderhouse/clase32/ejemplos/nodeProfiler/node_modules/express/lib/middleware/init.js:29:30
+      1  100.0%          Function: ^handle /Volumes/Datos/Coderhouse/Comision32065Coderhouse/clase32/ejemplos/nodeProfiler/node_modules/express/lib/router/layer.js:86:49
+      1  100.0%            Function: ^trim_prefix /Volumes/Datos/Coderhouse/Comision32065Coderhouse/clase32/ejemplos/nodeProfiler/node_modules/express/lib/router/index.js:293:23
+      1    3.8%        Function: ^checkInvalidHeaderChar node:_http_common:231:32
+      1  100.0%          Function: ^<anonymous> node:_http_outgoing:577:45
+      1  100.0%            Function: ^setHeader node:_http_outgoing:601:57
+     14    4.7%      Function: ^writevGeneric node:internal/stream_base_commons:122:23
+     14  100.0%        Function: ^Socket._writeGeneric node:net:848:42
+     14  100.0%          Function: ^Socket._writev node:net:880:36
+     14  100.0%            Function: ^doWrite node:internal/streams/writable:400:17
+     14    4.7%      Function: ^resolve node:path:1091:10
+     14  100.0%        Function: ^realpathSync node:fs:2460:22
+     14  100.0%          LazyCompile: ~toRealPath node:internal/modules/cjs/loader:404:20
+     14  100.0%            LazyCompile: ~tryFile node:internal/modules/cjs/loader:395:17
+      6    2.0%      LazyCompile: ~cache node:internal/http:19:15
+      6  100.0%        LazyCompile: ~utcDate node:internal/http:14:17
+      6  100.0%          LazyCompile: ~_storeHeader node:_http_outgoing:384:22
+      6  100.0%            LazyCompile: ~writeHead node:_http_server:292:19
+      6    2.0%      Function: ^sendStatus /Volumes/Datos/Coderhouse/Comision32065Coderhouse/clase32/ejemplos/nodeProfiler/node_modules/express/lib/response.js:369:37
+      6  100.0%        Function: ^<anonymous> /Volumes/Datos/Coderhouse/Comision32065Coderhouse/clase32/ejemplos/nodeProfiler/server.js:66:73
+      6  100.0%          Function: ^job.ondone node:internal/crypto/pbkdf2:56:16
+      5    1.7%      Function: ^send /Volumes/Datos/Coderhouse/Comision32065Coderhouse/clase32/ejemplos/nodeProfiler/node_modules/express/lib/response.js:111:25
+      5  100.0%        Function: ^sendStatus /Volumes/Datos/Coderhouse/Comision32065Coderhouse/clase32/ejemplos/nodeProfiler/node_modules/express/lib/response.js:369:37
+      5  100.0%          Function: ^<anonymous> /Volumes/Datos/Coderhouse/Comision32065Coderhouse/clase32/ejemplos/nodeProfiler/server.js:66:73
+      5  100.0%            Function: ^job.ondone node:internal/crypto/pbkdf2:56:16
+      5    1.7%      Function: ^readPackage node:internal/modules/cjs/loader:301:21
+      4   80.0%        Function: ^resolveExports node:internal/modules/cjs/loader:483:24
+      4  100.0%          Function: ^Module._findPath node:internal/modules/cjs/loader:505:28
+      3   75.0%            Function: ^Module._resolveFilename node:internal/modules/cjs/loader:865:35
+      1   25.0%            LazyCompile: ~Module._resolveFilename node:internal/modules/cjs/loader:865:35
+      1   20.0%        LazyCompile: ~resolveExports node:internal/modules/cjs/loader:483:24
+      1  100.0%          Function: ^Module._findPath node:internal/modules/cjs/loader:505:28
+      1  100.0%            LazyCompile: ~Module._resolveFilename node:internal/modules/cjs/loader:865:35
+      5    1.7%      Function: ^originalurl /Volumes/Datos/Coderhouse/Comision32065Coderhouse/clase32/ejemplos/nodeProfiler/node_modules/parseurl/index.js:65:22
+      5  100.0%        Function: ^serveStatic /Volumes/Datos/Coderhouse/Comision32065Coderhouse/clase32/ejemplos/nodeProfiler/node_modules/serve-static/index.js:72:31
+      5  100.0%          Function: ^handle /Volumes/Datos/Coderhouse/Comision32065Coderhouse/clase32/ejemplos/nodeProfiler/node_modules/express/lib/router/layer.js:86:49
+      5  100.0%            Function: ^trim_prefix /Volumes/Datos/Coderhouse/Comision32065Coderhouse/clase32/ejemplos/nodeProfiler/node_modules/express/lib/router/index.js:293:23
+      5    1.7%      Function: ^Hash node:internal/crypto/hash:62:14
+      5  100.0%        Function: ^createHash node:crypto:129:20
+      5  100.0%          Function: ^entitytag /Volumes/Datos/Coderhouse/Comision32065Coderhouse/clase32/ejemplos/nodeProfiler/node_modules/etag/index.js:39:20
+      5  100.0%            Function: ^etag /Volumes/Datos/Coderhouse/Comision32065Coderhouse/clase32/ejemplos/nodeProfiler/node_modules/etag/index.js:70:15
+      4    1.4%      Function: ^writeHead node:_http_server:292:19
+      4  100.0%        Function: ^_implicitHeader node:_http_server:287:68
+      4  100.0%          Function: ^write_ node:_http_outgoing:790:16
+      4  100.0%            Function: ^end node:_http_outgoing:912:45
+      4    1.4%      Function: ^pbkdf2 node:internal/crypto/pbkdf2:36:16
+      4  100.0%        Function: ^<anonymous> /Volumes/Datos/Coderhouse/Comision32065Coderhouse/clase32/ejemplos/nodeProfiler/server.js:55:25
+      4  100.0%          Function: ^handle /Volumes/Datos/Coderhouse/Comision32065Coderhouse/clase32/ejemplos/nodeProfiler/node_modules/express/lib/router/layer.js:86:49
+      4  100.0%            Function: ^next /Volumes/Datos/Coderhouse/Comision32065Coderhouse/clase32/ejemplos/nodeProfiler/node_modules/express/lib/router/route.js:116:16
+      4    1.4%      Function: ^next /Volumes/Datos/Coderhouse/Comision32065Coderhouse/clase32/ejemplos/nodeProfiler/node_modules/express/lib/router/index.js:177:16
+      4  100.0%        Function: ^error /Volumes/Datos/Coderhouse/Comision32065Coderhouse/clase32/ejemplos/nodeProfiler/node_modules/serve-static/index.js:115:39
+      4  100.0%          Function: ^emit node:events:460:44
+      3   75.0%            Function: ^error /Volumes/Datos/Coderhouse/Comision32065Coderhouse/clase32/ejemplos/nodeProfiler/node_modules/send/index.js:267:45
+      1   25.0%            LazyCompile: ~error /Volumes/Datos/Coderhouse/Comision32065Coderhouse/clase32/ejemplos/nodeProfiler/node_modules/send/index.js:267:45
+      4    1.4%      Function: ^expressInit /Volumes/Datos/Coderhouse/Comision32065Coderhouse/clase32/ejemplos/nodeProfiler/node_modules/express/lib/middleware/init.js:29:30
+      4  100.0%        Function: ^handle /Volumes/Datos/Coderhouse/Comision32065Coderhouse/clase32/ejemplos/nodeProfiler/node_modules/express/lib/router/layer.js:86:49
+      4  100.0%          Function: ^trim_prefix /Volumes/Datos/Coderhouse/Comision32065Coderhouse/clase32/ejemplos/nodeProfiler/node_modules/express/lib/router/index.js:293:23
+      2   50.0%            LazyCompile: *next /Volumes/Datos/Coderhouse/Comision32065Coderhouse/clase32/ejemplos/nodeProfiler/node_modules/express/lib/router/index.js:177:16
+      2   50.0%            Function: ^<anonymous> /Volumes/Datos/Coderhouse/Comision32065Coderhouse/clase32/ejemplos/nodeProfiler/node_modules/express/lib/router/index.js:280:64
+      4    1.4%      Function: ^<anonymous> /Volumes/Datos/Coderhouse/Comision32065Coderhouse/clase32/ejemplos/nodeProfiler/server.js:66:73
+      4  100.0%        Function: ^job.ondone node:internal/crypto/pbkdf2:56:16
+      3    1.0%      LazyCompile: ~WriteStream node:tty:85:21
+      3  100.0%        LazyCompile: ~createWritableStdioStream node:internal/bootstrap/switches/is_main_thread:45:35
+      2   66.7%          LazyCompile: ~getStdout node:internal/bootstrap/switches/is_main_thread:146:19
+      2  100.0%            LazyCompile: ~get node:internal/console/constructor:208:14
+      1   33.3%          LazyCompile: ~getStderr node:internal/bootstrap/switches/is_main_thread:168:19
+      1  100.0%            Function: ~<anonymous> /Volumes/Datos/Coderhouse/Comision32065Coderhouse/clase32/ejemplos/nodeProfiler/node_modules/debug/src/node.js:1:1
+      3    1.0%      LazyCompile: ~Module._extensions..json node:internal/modules/cjs/loader:1185:39
+      3  100.0%        Function: ^Module.load node:internal/modules/cjs/loader:992:33
+      3  100.0%          Function: ^Module._load node:internal/modules/cjs/loader:771:24
+      3  100.0%            Function: ^Module.require node:internal/modules/cjs/loader:1020:36
+      3    1.0%      Function: ^nextTick node:internal/process/task_queues:104:18
+      1   33.3%        Function: ^resume node:internal/streams/readable:977:16
+      1  100.0%          Function: ^Readable.resume node:internal/streams/readable:963:37
+      1  100.0%            Function: ^_dump node:_http_incoming:419:49
+      1   33.3%        Function: ^resOnFinish node:_http_server:816:21
+      1  100.0%          Function: ^emit node:events:460:44
+      1  100.0%            Function: ^onFinish node:_http_outgoing:907:18
+      1   33.3%        Function: ^emitReadable node:internal/streams/readable:563:22
+      1  100.0%          Function: ^onEofChunk node:internal/streams/readable:533:20
+      1  100.0%            Function: ^readableAddChunk node:internal/streams/readable:236:26
+
+    150    7.0%  T node::native_module::NativeModuleEnv::CompileFunction(v8::FunctionCallbackInfo<v8::Value> const&)
+    150  100.0%    t node::options_parser::OptionsParser<node::PerIsolateOptions>::Parse(std::__1::vector<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::allocator<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > > >*, std::__1::vector<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::allocator<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > > >*, std::__1::vector<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::allocator<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > > >*, node::PerIsolateOptions*, node::OptionEnvvarSettings, std::__1::vector<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::allocator<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > > >*) const
+    100   66.7%      Function: ^compileForInternalLoader node:internal/bootstrap/loaders:316:27
+     91   91.0%        Function: ^nativeModuleRequire node:internal/bootstrap/loaders:349:29
+     16   17.6%          Function: ~<anonymous> node:crypto:1:1
+     16  100.0%            Function: ^compileForInternalLoader node:internal/bootstrap/loaders:316:27
+     13   14.3%          Function: ~<anonymous> node:http:1:1
+     13  100.0%            Function: ^compileForInternalLoader node:internal/bootstrap/loaders:316:27
+      9    9.9%          Function: ~<anonymous> node:_http_client:1:1
+      9  100.0%            Function: ^compileForInternalLoader node:internal/bootstrap/loaders:316:27
+      5    5.5%          LazyCompile: ~lazyRequire node:internal/crypto/util:67:21
+      5  100.0%            LazyCompile: ~get node:crypto:294:8
+      5    5.5%          Function: ~<anonymous> node:child_process:1:1
+      5  100.0%            Function: ^compileForInternalLoader node:internal/bootstrap/loaders:316:27
+      4    4.4%          Function: ~<anonymous> node:internal/modules/esm/load:1:1
+      4  100.0%            Function: ^compileForInternalLoader node:internal/bootstrap/loaders:316:27
+      4    4.4%          Function: ~<anonymous> node:internal/crypto/hkdf:1:1
+      4  100.0%            Function: ^compileForInternalLoader node:internal/bootstrap/loaders:316:27
+      4    4.4%          Function: ~<anonymous> node:internal/cluster/primary:1:1
+      4  100.0%            Function: ^compileForInternalLoader node:internal/bootstrap/loaders:316:27
+      4    4.4%          Function: ~<anonymous> node:internal/child_process:1:1
+      4  100.0%            Function: ^compileForInternalLoader node:internal/bootstrap/loaders:316:27
+      3    3.3%          Function: ~<anonymous> node:internal/process/esm_loader:1:1
+      3  100.0%            LazyCompile: ~compileForInternalLoader node:internal/bootstrap/loaders:316:27
+      3    3.3%          Function: ~<anonymous> node:internal/modules/esm/loader:1:1
+      3  100.0%            LazyCompile: ~compileForInternalLoader node:internal/bootstrap/loaders:316:27
+      3    3.3%          Function: ~<anonymous> node:_http_common:1:1
+      3  100.0%            Function: ^compileForInternalLoader node:internal/bootstrap/loaders:316:27
+      2    2.2%          LazyCompile: ~lazyLoadStreams node:fs:2893:25
+      2  100.0%            LazyCompile: ~get ReadStream node:fs:3036:17
+      2    2.2%          LazyCompile: ~get BlockList node:net:1920:16
+      2  100.0%            Function: ~<anonymous> node:internal/modules/esm/fetch_module:1:1
+      2    2.2%          Function: ~<anonymous> node:tty:1:1
+      2  100.0%            Function: ^compileForInternalLoader node:internal/bootstrap/loaders:316:27
+      2    2.2%          Function: ~<anonymous> node:internal/crypto/pbkdf2:1:1
+      2  100.0%            Function: ^compileForInternalLoader node:internal/bootstrap/loaders:316:27
+      2    2.2%          Function: ~<anonymous> node:cluster:1:1
+      2  100.0%            Function: ^compileForInternalLoader node:internal/bootstrap/loaders:316:27
+      1    1.1%          Function: ~<anonymous> node:internal/modules/esm/translators:1:1
+      1  100.0%            Function: ^compileForInternalLoader node:internal/bootstrap/loaders:316:27
+      1    1.1%          Function: ~<anonymous> node:internal/modules/esm/get_format:1:1
+      1  100.0%            LazyCompile: ~compileForInternalLoader node:internal/bootstrap/loaders:316:27
+      1    1.1%          Function: ~<anonymous> node:internal/fs/promises:1:1
+      1  100.0%            Function: ^compileForInternalLoader node:internal/bootstrap/loaders:316:27
+      1    1.1%          Function: ~<anonymous> node:internal/crypto/util:1:1
+      1  100.0%            Function: ^compileForInternalLoader node:internal/bootstrap/loaders:316:27
+      1    1.1%          Function: ~<anonymous> node:internal/crypto/cipher:1:1
+      1  100.0%            Function: ^compileForInternalLoader node:internal/bootstrap/loaders:316:27
+      1    1.1%          Function: ~<anonymous> node:internal/cluster/round_robin_handle:1:1
+      1  100.0%            Function: ^compileForInternalLoader node:internal/bootstrap/loaders:316:27
+      1    1.1%          Function: ~<anonymous> node:internal/blocklist:1:1
+      1  100.0%            Function: ^compileForInternalLoader node:internal/bootstrap/loaders:316:27
+      1    1.1%          Function: ~<anonymous> node:dgram:1:1
+      1  100.0%            Function: ^compileForInternalLoader node:internal/bootstrap/loaders:316:27
+      6    6.0%        Function: ^compileForPublicLoader node:internal/bootstrap/loaders:263:25
+      6  100.0%          Function: ^loadNativeModule node:internal/modules/cjs/helpers:44:26
+      6  100.0%            Function: ^Module._load node:internal/modules/cjs/loader:771:24
+      3    3.0%        LazyCompile: ~compileForPublicLoader node:internal/bootstrap/loaders:263:25
+      2   66.7%          LazyCompile: ~loadNativeModule node:internal/modules/cjs/helpers:44:26
+      2  100.0%            LazyCompile: ~Module._load node:internal/modules/cjs/loader:771:24
+      1   33.3%          Function: ^loadNativeModule node:internal/modules/cjs/helpers:44:26
+      1  100.0%            Function: ^Module._load node:internal/modules/cjs/loader:771:24
+     50   33.3%      LazyCompile: ~compileForInternalLoader node:internal/bootstrap/loaders:316:27
+     40   80.0%        Function: ^nativeModuleRequire node:internal/bootstrap/loaders:349:29
+      9   22.5%          Function: ~<anonymous> node:internal/modules/esm/fetch_module:1:1
+      9  100.0%            LazyCompile: ~compileForInternalLoader node:internal/bootstrap/loaders:316:27
+      7   17.5%          Function: ~<anonymous> node:internal/modules/esm/loader:1:1
+      7  100.0%            LazyCompile: ~compileForInternalLoader node:internal/bootstrap/loaders:316:27
+      6   15.0%          LazyCompile: ~initializeCJSLoader node:internal/bootstrap/pre_execution:521:29
+      6  100.0%            LazyCompile: ~prepareMainThreadExecution node:internal/bootstrap/pre_execution:29:36
+      4   10.0%          Function: ~<anonymous> node:internal/process/esm_loader:1:1
+      4  100.0%            LazyCompile: ~compileForInternalLoader node:internal/bootstrap/loaders:316:27
+      3    7.5%          Function: ~<anonymous> node:internal/modules/esm/module_map:1:1
+      3  100.0%            LazyCompile: ~compileForInternalLoader node:internal/bootstrap/loaders:316:27
+      2    5.0%          LazyCompile: ~initializeSourceMapsHandlers node:internal/bootstrap/pre_execution:560:38
+      2  100.0%            LazyCompile: ~prepareMainThreadExecution node:internal/bootstrap/pre_execution:29:36
+      2    5.0%          LazyCompile: ~initializeReport node:internal/bootstrap/pre_execution:278:26
+      2  100.0%            LazyCompile: ~prepareMainThreadExecution node:internal/bootstrap/pre_execution:29:36
+      2    5.0%          Function: ~<anonymous> node:internal/source_map/source_map_cache:1:1
+      2  100.0%            LazyCompile: ~compileForInternalLoader node:internal/bootstrap/loaders:316:27
+      2    5.0%          Function: ~<anonymous> node:internal/modules/cjs/loader:1:1
+      2  100.0%            LazyCompile: ~compileForInternalLoader node:internal/bootstrap/loaders:316:27
+      1    2.5%          Function: ~<anonymous> node:net:1:1
+      1  100.0%            LazyCompile: ~compileForInternalLoader node:internal/bootstrap/loaders:316:27
+      1    2.5%          Function: ~<anonymous> node:internal/modules/esm/resolve:1:1
+      1  100.0%            LazyCompile: ~compileForInternalLoader node:internal/bootstrap/loaders:316:27
+      1    2.5%          Function: ~<anonymous> node:internal/modules/esm/get_format:1:1
+      1  100.0%            LazyCompile: ~compileForInternalLoader node:internal/bootstrap/loaders:316:27
+     10   20.0%        LazyCompile: ~nativeModuleRequire node:internal/bootstrap/loaders:349:29
+      6   60.0%          LazyCompile: ~setupInspectorHooks node:internal/bootstrap/pre_execution:329:29
+      6  100.0%            LazyCompile: ~prepareMainThreadExecution node:internal/bootstrap/pre_execution:29:36
+      4   40.0%          Function: ~<anonymous> node:internal/main/run_main_module:1:1
+
+     69    3.2%  T node::contextify::ContextifyContext::CompileFunction(v8::FunctionCallbackInfo<v8::Value> const&)
+     69  100.0%    t node::options_parser::OptionsParser<node::PerIsolateOptions>::Parse(std::__1::vector<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::allocator<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > > >*, std::__1::vector<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::allocator<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > > >*, std::__1::vector<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::allocator<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > > >*, node::PerIsolateOptions*, node::OptionEnvvarSettings, std::__1::vector<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::allocator<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > > >*) const
+     63   91.3%      Function: ^compileFunction node:vm:316:25
+     57   90.5%        Function: ^wrapSafe node:internal/modules/cjs/loader:1040:18
+     54   94.7%          Function: ^Module._compile node:internal/modules/cjs/loader:1080:37
+     29   53.7%            Function: ^Module._extensions..js node:internal/modules/cjs/loader:1135:37
+     25   46.3%            LazyCompile: ~Module._extensions..js node:internal/modules/cjs/loader:1135:37
+      3    5.3%          LazyCompile: ~Module._compile node:internal/modules/cjs/loader:1080:37
+      3  100.0%            LazyCompile: ~Module._extensions..js node:internal/modules/cjs/loader:1135:37
+      6    9.5%        LazyCompile: ~wrapSafe node:internal/modules/cjs/loader:1040:18
+      6  100.0%          LazyCompile: ~Module._compile node:internal/modules/cjs/loader:1080:37
+      6  100.0%            LazyCompile: ~Module._extensions..js node:internal/modules/cjs/loader:1135:37
+      6    8.7%      LazyCompile: ~compileFunction node:vm:316:25
+      6  100.0%        LazyCompile: ~wrapSafe node:internal/modules/cjs/loader:1040:18
+      6  100.0%          LazyCompile: ~Module._compile node:internal/modules/cjs/loader:1080:37
+      6  100.0%            LazyCompile: ~Module._extensions..js node:internal/modules/cjs/loader:1135:37
+
+     55    2.6%  T _host_request_notification
+     28   50.9%    t node::options_parser::OptionsParser<node::PerIsolateOptions>::Parse(std::__1::vector<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::allocator<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > > >*, std::__1::vector<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::allocator<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > > >*, std::__1::vector<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::allocator<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > > >*, node::PerIsolateOptions*, node::OptionEnvvarSettings, std::__1::vector<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::allocator<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > > >*) const
+      1    3.6%      LazyCompile: ~updateOutgoingData node:_http_server:582:28
+      1  100.0%        LazyCompile: ~_send node:_http_outgoing:329:49
+      1  100.0%          LazyCompile: ~write_ node:_http_outgoing:790:16
+      1  100.0%            LazyCompile: ~end node:_http_outgoing:912:45
+      1    3.6%      LazyCompile: ~resolve node:path:1091:10
+      1  100.0%        LazyCompile: ~patchProcessObject node:internal/bootstrap/pre_execution:103:28
+      1  100.0%          LazyCompile: ~prepareMainThreadExecution node:internal/bootstrap/pre_execution:29:36
+      1  100.0%            Function: ~<anonymous> node:internal/main/run_main_module:1:1
+      1    3.6%      LazyCompile: ~processTicksAndRejections node:internal/process/task_queues:68:35
+      1    3.6%      LazyCompile: ~prepareMainThreadExecution node:internal/bootstrap/pre_execution:29:36
+      1  100.0%        Function: ~<anonymous> node:internal/main/run_main_module:1:1
+      1    3.6%      LazyCompile: ~pipe /Volumes/Datos/Coderhouse/Comision32065Coderhouse/clase32/ejemplos/nodeProfiler/node_modules/send/index.js:506:43
+      1  100.0%        LazyCompile: ~serveStatic /Volumes/Datos/Coderhouse/Comision32065Coderhouse/clase32/ejemplos/nodeProfiler/node_modules/serve-static/index.js:72:31
+      1  100.0%          LazyCompile: ~handle /Volumes/Datos/Coderhouse/Comision32065Coderhouse/clase32/ejemplos/nodeProfiler/node_modules/express/lib/router/layer.js:86:49
+      1  100.0%            LazyCompile: ~trim_prefix /Volumes/Datos/Coderhouse/Comision32065Coderhouse/clase32/ejemplos/nodeProfiler/node_modules/express/lib/router/index.js:293:23
+      1    3.6%      LazyCompile: ~patchProcessObject node:internal/bootstrap/pre_execution:103:28
+      1  100.0%        LazyCompile: ~prepareMainThreadExecution node:internal/bootstrap/pre_execution:29:36
+      1  100.0%          Function: ~<anonymous> node:internal/main/run_main_module:1:1
+      1    3.6%      LazyCompile: ~parseObject /Volumes/Datos/Coderhouse/Comision32065Coderhouse/clase32/ejemplos/nodeProfiler/node_modules/qs/lib/parse.js:115:28
+      1  100.0%        Function: ^parseQueryStringKeys /Volumes/Datos/Coderhouse/Comision32065Coderhouse/clase32/ejemplos/nodeProfiler/node_modules/qs/lib/parse.js:150:46
+      1  100.0%          Function: ^module.exports /Volumes/Datos/Coderhouse/Comision32065Coderhouse/clase32/ejemplos/nodeProfiler/node_modules/qs/lib/parse.js:239:27
+      1  100.0%            Function: ^parseExtendedQueryString /Volumes/Datos/Coderhouse/Comision32065Coderhouse/clase32/ejemplos/nodeProfiler/node_modules/express/lib/utils.js:289:34
+      1    3.6%      LazyCompile: ~onstat /Volumes/Datos/Coderhouse/Comision32065Coderhouse/clase32/ejemplos/nodeProfiler/node_modules/send/index.js:717:33
+      1  100.0%        LazyCompile: ~<anonymous> node:fs:205:10
+      1    3.6%      LazyCompile: ~merge /Volumes/Datos/Coderhouse/Comision32065Coderhouse/clase32/ejemplos/nodeProfiler/node_modules/qs/lib/utils.js:47:27
+      1  100.0%        Function: ^module.exports /Volumes/Datos/Coderhouse/Comision32065Coderhouse/clase32/ejemplos/nodeProfiler/node_modules/qs/lib/parse.js:239:27
+      1  100.0%          Function: ^parseExtendedQueryString /Volumes/Datos/Coderhouse/Comision32065Coderhouse/clase32/ejemplos/nodeProfiler/node_modules/express/lib/utils.js:289:34
+      1  100.0%            Function: ^query /Volumes/Datos/Coderhouse/Comision32065Coderhouse/clase32/ejemplos/nodeProfiler/node_modules/express/lib/middleware/query.js:39:24
+      1    3.6%      LazyCompile: ~lazyrouter /Volumes/Datos/Coderhouse/Comision32065Coderhouse/clase32/ejemplos/nodeProfiler/node_modules/express/lib/application.js:144:37
+      1  100.0%        LazyCompile: ~use /Volumes/Datos/Coderhouse/Comision32065Coderhouse/clase32/ejemplos/nodeProfiler/node_modules/express/lib/application.js:194:23
+      1  100.0%          Function: ~<anonymous> /Volumes/Datos/Coderhouse/Comision32065Coderhouse/clase32/ejemplos/nodeProfiler/server.js:1:1
+      1  100.0%            LazyCompile: ~Module._compile node:internal/modules/cjs/loader:1080:37
+      1    3.6%      LazyCompile: ~initializeCJSLoader node:internal/bootstrap/pre_execution:521:29
+      1  100.0%        LazyCompile: ~prepareMainThreadExecution node:internal/bootstrap/pre_execution:29:36
+      1  100.0%          Function: ~<anonymous> node:internal/main/run_main_module:1:1
+      1    3.6%      LazyCompile: ~init node:internal/util/debuglog:72:16
+      1  100.0%        LazyCompile: ~debug node:internal/util/debuglog:76:15
+      1  100.0%          LazyCompile: ~logger node:internal/util/debuglog:95:18
+      1  100.0%            LazyCompile: ~Module._resolveLookupPaths node:internal/modules/cjs/loader:678:38
+      1    3.6%      LazyCompile: ~getObserverType node:internal/perf/observe:126:25
+      1  100.0%        Function: ^hasObserver node:internal/perf/observe:460:21
+      1  100.0%          LazyCompile: ~ServerResponse node:_http_server:183:24
+      1  100.0%            Function: ^parserOnIncoming node:_http_server:880:26
+      1    3.6%      LazyCompile: ~forEachCode /Volumes/Datos/Coderhouse/Comision32065Coderhouse/clase32/ejemplos/nodeProfiler/node_modules/http-errors/index.js:259:38
+      1  100.0%        t node::options_parser::OptionsParser<node::PerIsolateOptions>::Parse(std::__1::vector<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::allocator<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > > >*, std::__1::vector<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::allocator<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > > >*, std::__1::vector<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::allocator<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > > >*, node::PerIsolateOptions*, node::OptionEnvvarSettings, std::__1::vector<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::allocator<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > > >*) const
+      1  100.0%          LazyCompile: ~populateConstructorExports /Volumes/Datos/Coderhouse/Comision32065Coderhouse/clase32/ejemplos/nodeProfiler/node_modules/http-errors/index.js:258:37
+      1  100.0%            Function: ~<anonymous> /Volumes/Datos/Coderhouse/Comision32065Coderhouse/clase32/ejemplos/nodeProfiler/node_modules/http-errors/index.js:1:1
+      1    3.6%      LazyCompile: ~end node:_http_outgoing:912:45
+      1  100.0%        LazyCompile: ~send /Volumes/Datos/Coderhouse/Comision32065Coderhouse/clase32/ejemplos/nodeProfiler/node_modules/express/lib/response.js:111:25
+      1  100.0%          LazyCompile: ~sendStatus /Volumes/Datos/Coderhouse/Comision32065Coderhouse/clase32/ejemplos/nodeProfiler/node_modules/express/lib/response.js:369:37
+      1  100.0%            LazyCompile: ~<anonymous> /Volumes/Datos/Coderhouse/Comision32065Coderhouse/clase32/ejemplos/nodeProfiler/server.js:14:21
+      1    3.6%      LazyCompile: ~decode /Volumes/Datos/Coderhouse/Comision32065Coderhouse/clase32/ejemplos/nodeProfiler/node_modules/send/index.js:997:17
+      1  100.0%        LazyCompile: ~pipe /Volumes/Datos/Coderhouse/Comision32065Coderhouse/clase32/ejemplos/nodeProfiler/node_modules/send/index.js:506:43
+      1  100.0%          Function: ^serveStatic /Volumes/Datos/Coderhouse/Comision32065Coderhouse/clase32/ejemplos/nodeProfiler/node_modules/serve-static/index.js:72:31
+      1  100.0%            Function: ^handle /Volumes/Datos/Coderhouse/Comision32065Coderhouse/clase32/ejemplos/nodeProfiler/node_modules/express/lib/router/layer.js:86:49
+      1    3.6%      LazyCompile: ~createWritableStdioStream node:internal/bootstrap/switches/is_main_thread:45:35
+      1  100.0%        LazyCompile: ~getStderr node:internal/bootstrap/switches/is_main_thread:168:19
+      1  100.0%          Function: ~<anonymous> /Volumes/Datos/Coderhouse/Comision32065Coderhouse/clase32/ejemplos/nodeProfiler/node_modules/debug/src/node.js:1:1
+      1  100.0%            LazyCompile: ~Module._compile node:internal/modules/cjs/loader:1080:37
+      1    3.6%      LazyCompile: ~createServer node:http:58:22
+      1  100.0%        LazyCompile: ~listen /Volumes/Datos/Coderhouse/Comision32065Coderhouse/clase32/ejemplos/nodeProfiler/node_modules/express/lib/application.js:633:29
+      1  100.0%          Function: ~<anonymous> /Volumes/Datos/Coderhouse/Comision32065Coderhouse/clase32/ejemplos/nodeProfiler/server.js:1:1
+      1  100.0%            LazyCompile: ~Module._compile node:internal/modules/cjs/loader:1080:37
+      1    3.6%      LazyCompile: ~compact /Volumes/Datos/Coderhouse/Comision32065Coderhouse/clase32/ejemplos/nodeProfiler/node_modules/qs/lib/utils.js:190:31
+      1  100.0%        Function: ^module.exports /Volumes/Datos/Coderhouse/Comision32065Coderhouse/clase32/ejemplos/nodeProfiler/node_modules/qs/lib/parse.js:239:27
+      1  100.0%          LazyCompile: ~parseExtendedQueryString /Volumes/Datos/Coderhouse/Comision32065Coderhouse/clase32/ejemplos/nodeProfiler/node_modules/express/lib/utils.js:289:34
+      1  100.0%            LazyCompile: ~query /Volumes/Datos/Coderhouse/Comision32065Coderhouse/clase32/ejemplos/nodeProfiler/node_modules/express/lib/middleware/query.js:39:24
+      1    3.6%      LazyCompile: ~allocate node:buffer:403:18
+      1  100.0%        LazyCompile: ~allocUnsafe node:buffer:378:42
+      1  100.0%          LazyCompile: ~tryCreateBuffer node:fs:423:25
+      1  100.0%            LazyCompile: ~readFileSync node:fs:459:22
+      1    3.6%      LazyCompile: ~_storeHeader node:_http_outgoing:384:22
+      1  100.0%        LazyCompile: ~writeHead node:_http_server:292:19
+      1  100.0%          LazyCompile: ~_implicitHeader node:_http_server:287:68
+      1  100.0%            LazyCompile: ~write_ node:_http_outgoing:790:16
+      1    3.6%      LazyCompile: ~_addListener node:events:541:22
+      1  100.0%        LazyCompile: ~addListener node:events:604:58
+      1  100.0%          LazyCompile: ~getStdout node:internal/bootstrap/switches/is_main_thread:146:19
+      1  100.0%            LazyCompile: ~get node:internal/console/constructor:208:14
+      1    3.6%      LazyCompile: ~Socket._writev node:net:880:36
+      1  100.0%        LazyCompile: ~doWrite node:internal/streams/writable:400:17
+      1  100.0%          LazyCompile: ~clearBuffer node:internal/streams/writable:531:21
+      1  100.0%            Function: ^Writable.uncork node:internal/streams/writable:343:37
+      1    3.6%      LazyCompile: ~Readable.read node:internal/streams/readable:394:35
+      1  100.0%        Function: ^resume_ node:internal/streams/readable:984:17
+      1  100.0%          Function: ^processTicksAndRejections node:internal/process/task_queues:68:35
+      1    3.6%      LazyCompile: ~Readable node:internal/streams/readable:181:18
+      1  100.0%        LazyCompile: ~Duplex node:internal/streams/duplex:54:16
+      1  100.0%          LazyCompile: ~Socket node:net:294:16
+      1  100.0%            LazyCompile: ~WriteStream node:tty:85:21
+      1    3.6%      Function: ~<anonymous> node:internal/crypto/webcrypto:1:1
+      1  100.0%        Function: ^compileForInternalLoader node:internal/bootstrap/loaders:316:27
+      1  100.0%          Function: ^nativeModuleRequire node:internal/bootstrap/loaders:349:29
+      1  100.0%            LazyCompile: ~lazyRequire node:internal/crypto/util:67:21
+      1    3.6%      Function: ~<anonymous> /Volumes/Datos/Coderhouse/Comision32065Coderhouse/clase32/ejemplos/nodeProfiler/node_modules/raw-body/index.js:1:1
+      1  100.0%        Function: ^Module._compile node:internal/modules/cjs/loader:1080:37
+      1  100.0%          Function: ^Module._extensions..js node:internal/modules/cjs/loader:1135:37
+      1  100.0%            Function: ^Module.load node:internal/modules/cjs/loader:992:33
+      1    3.6%      Function: ~<anonymous> /Volumes/Datos/Coderhouse/Comision32065Coderhouse/clase32/ejemplos/nodeProfiler/node_modules/get-intrinsic/index.js:1:1
+      1  100.0%        Function: ^Module._compile node:internal/modules/cjs/loader:1080:37
+      1  100.0%          LazyCompile: ~Module._extensions..js node:internal/modules/cjs/loader:1135:37
+      1  100.0%            Function: ^Module.load node:internal/modules/cjs/loader:992:33
+
+     43    2.0%  /usr/lib/system/libsystem_pthread.dylib
+     40   93.0%    t node::options_parser::OptionsParser<node::PerIsolateOptions>::Parse(std::__1::vector<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::allocator<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > > >*, std::__1::vector<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::allocator<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > > >*, std::__1::vector<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::allocator<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > > >*, node::PerIsolateOptions*, node::OptionEnvvarSettings, std::__1::vector<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::allocator<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > > >*) const
+      4   10.0%      LazyCompile: ~createWritableStdioStream node:internal/bootstrap/switches/is_main_thread:45:35
+      4  100.0%        LazyCompile: ~getStderr node:internal/bootstrap/switches/is_main_thread:168:19
+      4  100.0%          Function: ~<anonymous> /Volumes/Datos/Coderhouse/Comision32065Coderhouse/clase32/ejemplos/nodeProfiler/node_modules/debug/src/node.js:1:1
+      4  100.0%            LazyCompile: ~Module._compile node:internal/modules/cjs/loader:1080:37
+      3    7.5%      t node::options_parser::OptionsParser<node::PerIsolateOptions>::Parse(std::__1::vector<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::allocator<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > > >*, std::__1::vector<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::allocator<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > > >*, std::__1::vector<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::allocator<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > > >*, node::PerIsolateOptions*, node::OptionEnvvarSettings, std::__1::vector<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::allocator<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > > >*) const
+      3  100.0%        LazyCompile: ~getStack /Volumes/Datos/Coderhouse/Comision32065Coderhouse/clase32/ejemplos/nodeProfiler/node_modules/depd/index.js:381:19
+      3  100.0%          LazyCompile: ~depd /Volumes/Datos/Coderhouse/Comision32065Coderhouse/clase32/ejemplos/nodeProfiler/node_modules/depd/index.js:103:15
+      3  100.0%            Function: ~<anonymous> /Volumes/Datos/Coderhouse/Comision32065Coderhouse/clase32/ejemplos/nodeProfiler/node_modules/body-parser/index.js:1:1
+      3    7.5%      LazyCompile: ~value node:internal/console/constructor:336:20
+      3  100.0%        LazyCompile: ~log node:internal/console/constructor:375:6
+      3  100.0%          t node::options_parser::OptionsParser<node::PerIsolateOptions>::Parse(std::__1::vector<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::allocator<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > > >*, std::__1::vector<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::allocator<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > > >*, std::__1::vector<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::allocator<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > > >*, node::PerIsolateOptions*, node::OptionEnvvarSettings, std::__1::vector<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::allocator<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > > >*) const
+      3  100.0%            LazyCompile: ~<anonymous> /Volumes/Datos/Coderhouse/Comision32065Coderhouse/clase32/ejemplos/nodeProfiler/server.js:77:33
+      3    7.5%      LazyCompile: ~toRealPath node:internal/modules/cjs/loader:404:20
+      3  100.0%        LazyCompile: ~Module._findPath node:internal/modules/cjs/loader:505:28
+      3  100.0%          LazyCompile: ~resolveMainPath node:internal/modules/run_main:15:25
+      3  100.0%            LazyCompile: ~executeUserEntryPoint node:internal/modules/run_main:74:31
+      3    7.5%      LazyCompile: ~patchProcessObject node:internal/bootstrap/pre_execution:103:28
+      3  100.0%        LazyCompile: ~prepareMainThreadExecution node:internal/bootstrap/pre_execution:29:36
+      3  100.0%          Function: ~<anonymous> node:internal/main/run_main_module:1:1
+      3    7.5%      Function: ~<anonymous> node:internal/fs/promises:1:1
+      3  100.0%        Function: ^compileForInternalLoader node:internal/bootstrap/loaders:316:27
+      3  100.0%          Function: ^nativeModuleRequire node:internal/bootstrap/loaders:349:29
+      3  100.0%            Function: ~<anonymous> node:internal/modules/esm/load:1:1
+      2    5.0%      LazyCompile: ~realpathSync node:fs:2460:22
+      2  100.0%        LazyCompile: ~toRealPath node:internal/modules/cjs/loader:404:20
+      2  100.0%          LazyCompile: ~Module._findPath node:internal/modules/cjs/loader:505:28
+      2  100.0%            LazyCompile: ~resolveMainPath node:internal/modules/run_main:15:25
+      2    5.0%      LazyCompile: ~ServerResponse node:_http_server:183:24
+      2  100.0%        LazyCompile: ~parserOnIncoming node:_http_server:880:26
+      2  100.0%          LazyCompile: ~parserOnHeadersComplete node:_http_common:77:33
+      2    5.0%      Function: ^fastparse /Volumes/Datos/Coderhouse/Comision32065Coderhouse/clase32/ejemplos/nodeProfiler/node_modules/parseurl/index.js:95:20
+      2  100.0%        LazyCompile: ~parseurl /Volumes/Datos/Coderhouse/Comision32065Coderhouse/clase32/ejemplos/nodeProfiler/node_modules/parseurl/index.js:35:19
+      2  100.0%          LazyCompile: ~getPathname /Volumes/Datos/Coderhouse/Comision32065Coderhouse/clase32/ejemplos/nodeProfiler/node_modules/express/lib/router/index.js:537:21
+      2  100.0%            LazyCompile: ~next /Volumes/Datos/Coderhouse/Comision32065Coderhouse/clase32/ejemplos/nodeProfiler/node_modules/express/lib/router/index.js:177:16
+      1    2.5%      LazyCompile: ~wrapSafe node:internal/modules/cjs/loader:1040:18
+      1  100.0%        LazyCompile: ~Module._compile node:internal/modules/cjs/loader:1080:37
+      1  100.0%          LazyCompile: ~Module._extensions..js node:internal/modules/cjs/loader:1135:37
+      1  100.0%            LazyCompile: ~Module.load node:internal/modules/cjs/loader:992:33
+      1    2.5%      LazyCompile: ~value node:internal/console/constructor:230:20
+      1  100.0%        LazyCompile: ~initializeGlobalConsole node:internal/console/constructor:687:33
+      1  100.0%          LazyCompile: ~patchProcessObject node:internal/bootstrap/pre_execution:103:28
+      1  100.0%            LazyCompile: ~prepareMainThreadExecution node:internal/bootstrap/pre_execution:29:36
+      1    2.5%      LazyCompile: ~setupWarningHandler node:internal/bootstrap/pre_execution:168:29
+      1  100.0%        LazyCompile: ~prepareMainThreadExecution node:internal/bootstrap/pre_execution:29:36
+      1  100.0%          Function: ~<anonymous> node:internal/main/run_main_module:1:1
+      1    2.5%      LazyCompile: ~setupPerfHooks node:internal/bootstrap/pre_execution:324:24
+      1  100.0%        LazyCompile: ~prepareMainThreadExecution node:internal/bootstrap/pre_execution:29:36
+      1  100.0%          Function: ~<anonymous> node:internal/main/run_main_module:1:1
+      1    2.5%      LazyCompile: ~send /Volumes/Datos/Coderhouse/Comision32065Coderhouse/clase32/ejemplos/nodeProfiler/node_modules/express/lib/response.js:111:25
+      1  100.0%        LazyCompile: ~sendStatus /Volumes/Datos/Coderhouse/Comision32065Coderhouse/clase32/ejemplos/nodeProfiler/node_modules/express/lib/response.js:369:37
+      1  100.0%          LazyCompile: ~<anonymous> /Volumes/Datos/Coderhouse/Comision32065Coderhouse/clase32/ejemplos/nodeProfiler/server.js:14:21
+      1  100.0%            LazyCompile: ~handle /Volumes/Datos/Coderhouse/Comision32065Coderhouse/clase32/ejemplos/nodeProfiler/node_modules/express/lib/router/layer.js:86:49
+      1    2.5%      LazyCompile: ~prepareMainThreadExecution node:internal/bootstrap/pre_execution:29:36
+      1  100.0%        Function: ~<anonymous> node:internal/main/run_main_module:1:1
+      1    2.5%      LazyCompile: ~onParseComplete node:internal/url:544:25
+      1  100.0%        t node::options_parser::OptionsParser<node::PerIsolateOptions>::Parse(std::__1::vector<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::allocator<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > > >*, std::__1::vector<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::allocator<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > > >*, std::__1::vector<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::allocator<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > > >*, node::PerIsolateOptions*, node::OptionEnvvarSettings, std::__1::vector<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::allocator<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > > >*) const
+      1  100.0%          LazyCompile: ~URL node:internal/url:632:14
+      1  100.0%            LazyCompile: ~pathToFileURL node:internal/url:1472:23
+      1    2.5%      LazyCompile: ~maybeOverridePrepareStackTrace node:internal/errors:135:40
+      1  100.0%        LazyCompile: ~prepareStackTrace node:internal/errors:90:27
+      1  100.0%          t node::options_parser::OptionsParser<node::PerIsolateOptions>::Parse(std::__1::vector<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::allocator<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > > >*, std::__1::vector<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::allocator<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > > >*, std::__1::vector<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::allocator<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > > >*, node::PerIsolateOptions*, node::OptionEnvvarSettings, std::__1::vector<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::allocator<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > > >*) const
+      1  100.0%            Function: ^getStack /Volumes/Datos/Coderhouse/Comision32065Coderhouse/clase32/ejemplos/nodeProfiler/node_modules/depd/index.js:381:19
+      1    2.5%      LazyCompile: ~debug node:internal/util/debuglog:76:15
+      1  100.0%        LazyCompile: ~logger node:internal/util/debuglog:95:18
+      1  100.0%          LazyCompile: ~connectionListenerInternal node:_http_server:471:36
+      1  100.0%            LazyCompile: ~defaultTriggerAsyncIdScope node:internal/async_hooks:455:36
+      1    2.5%      LazyCompile: ~createHash node:crypto:129:20
+      1  100.0%        LazyCompile: ~entitytag /Volumes/Datos/Coderhouse/Comision32065Coderhouse/clase32/ejemplos/nodeProfiler/node_modules/etag/index.js:39:20
+      1  100.0%          LazyCompile: ~etag /Volumes/Datos/Coderhouse/Comision32065Coderhouse/clase32/ejemplos/nodeProfiler/node_modules/etag/index.js:70:15
+      1  100.0%            LazyCompile: ~generateETag /Volumes/Datos/Coderhouse/Comision32065Coderhouse/clase32/ejemplos/nodeProfiler/node_modules/express/lib/utils.js:273:32
+      1    2.5%      LazyCompile: ~cache node:internal/http:19:15
+      1  100.0%        LazyCompile: ~utcDate node:internal/http:14:17
+      1  100.0%          LazyCompile: ~_storeHeader node:_http_outgoing:384:22
+      1  100.0%            LazyCompile: ~writeHead node:_http_server:292:19
+      1    2.5%      LazyCompile: ~ReadableState node:internal/streams/readable:78:23
+      1  100.0%        LazyCompile: ~Readable node:internal/streams/readable:181:18
+      1  100.0%          LazyCompile: ~Duplex node:internal/streams/duplex:54:16
+      1  100.0%            LazyCompile: ~Socket node:net:294:16
+      1    2.5%      LazyCompile: ~GetIntrinsic /Volumes/Datos/Coderhouse/Comision32065Coderhouse/clase32/ejemplos/nodeProfiler/node_modules/get-intrinsic/index.js:253:39
+      1  100.0%        Function: ~<anonymous> /Volumes/Datos/Coderhouse/Comision32065Coderhouse/clase32/ejemplos/nodeProfiler/node_modules/call-bind/index.js:1:1
+      1  100.0%          Function: ^Module._compile node:internal/modules/cjs/loader:1080:37
+      1  100.0%            LazyCompile: ~Module._extensions..js node:internal/modules/cjs/loader:1135:37
+      1    2.5%      LazyCompile: ~Duplex node:internal/streams/duplex:54:16
+      1  100.0%        LazyCompile: ~Socket node:net:294:16
+      1  100.0%          LazyCompile: ~WriteStream node:tty:85:21
+      1  100.0%            LazyCompile: ~createWritableStdioStream node:internal/bootstrap/switches/is_main_thread:45:35
+      1    2.5%      Function: ~<anonymous> node:internal/main/run_main_module:1:1
+
+     35    1.6%  /usr/lib/system/libsystem_c.dylib
+     29   82.9%    t node::options_parser::OptionsParser<node::PerIsolateOptions>::Parse(std::__1::vector<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::allocator<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > > >*, std::__1::vector<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::allocator<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > > >*, std::__1::vector<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::allocator<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > > >*, node::PerIsolateOptions*, node::OptionEnvvarSettings, std::__1::vector<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::allocator<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > > >*) const
+      4   13.8%      LazyCompile: ~value node:internal/console/constructor:336:20
+      4  100.0%        LazyCompile: ~log node:internal/console/constructor:375:6
+      4  100.0%          t node::options_parser::OptionsParser<node::PerIsolateOptions>::Parse(std::__1::vector<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::allocator<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > > >*, std::__1::vector<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::allocator<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > > >*, std::__1::vector<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::allocator<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > > >*, node::PerIsolateOptions*, node::OptionEnvvarSettings, std::__1::vector<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::allocator<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > > >*) const
+      4  100.0%            LazyCompile: ~<anonymous> /Volumes/Datos/Coderhouse/Comision32065Coderhouse/clase32/ejemplos/nodeProfiler/server.js:77:33
+      3   10.3%      LazyCompile: ~realpathSync node:fs:2460:22
+      3  100.0%        LazyCompile: ~toRealPath node:internal/modules/cjs/loader:404:20
+      3  100.0%          LazyCompile: ~Module._findPath node:internal/modules/cjs/loader:505:28
+      3  100.0%            LazyCompile: ~resolveMainPath node:internal/modules/run_main:15:25
+      2    6.9%      LazyCompile: ~toRealPath node:internal/modules/cjs/loader:404:20
+      2  100.0%        LazyCompile: ~Module._findPath node:internal/modules/cjs/loader:505:28
+      2  100.0%          LazyCompile: ~resolveMainPath node:internal/modules/run_main:15:25
+      2  100.0%            LazyCompile: ~executeUserEntryPoint node:internal/modules/run_main:74:31
+      2    6.9%      LazyCompile: ~setupWebCrypto node:internal/bootstrap/pre_execution:196:24
+      2  100.0%        LazyCompile: ~prepareMainThreadExecution node:internal/bootstrap/pre_execution:29:36
+      2  100.0%          Function: ~<anonymous> node:internal/main/run_main_module:1:1
+      2    6.9%      LazyCompile: ~setupWarningHandler node:internal/bootstrap/pre_execution:168:29
+      2  100.0%        LazyCompile: ~prepareMainThreadExecution node:internal/bootstrap/pre_execution:29:36
+      2  100.0%          Function: ~<anonymous> node:internal/main/run_main_module:1:1
+      1    3.4%      LazyCompile: ~wrapfunction /Volumes/Datos/Coderhouse/Comision32065Coderhouse/clase32/ejemplos/nodeProfiler/node_modules/depd/index.js:413:23
+      1  100.0%        Function: ~<anonymous> /Volumes/Datos/Coderhouse/Comision32065Coderhouse/clase32/ejemplos/nodeProfiler/node_modules/body-parser/index.js:1:1
+      1  100.0%          LazyCompile: ~Module._compile node:internal/modules/cjs/loader:1080:37
+      1  100.0%            LazyCompile: ~Module._extensions..js node:internal/modules/cjs/loader:1135:37
+      1    3.4%      LazyCompile: ~setupListenHandle node:net:1385:27
+      1  100.0%        LazyCompile: ~listenInCluster node:net:1470:25
+      1  100.0%          LazyCompile: ~Server.listen node:net:1513:35
+      1  100.0%            LazyCompile: ~listen /Volumes/Datos/Coderhouse/Comision32065Coderhouse/clase32/ejemplos/nodeProfiler/node_modules/express/lib/application.js:633:29
+      1    3.4%      LazyCompile: ~setStreamTimeout node:internal/stream_base_commons:237:26
+      1  100.0%        LazyCompile: ~resOnFinish node:_http_server:816:21
+      1  100.0%          LazyCompile: ~emit node:events:460:44
+      1  100.0%            LazyCompile: ~onFinish node:_http_outgoing:907:18
+      1    3.4%      LazyCompile: ~processTicksAndRejections node:internal/process/task_queues:68:35
+      1    3.4%      LazyCompile: ~patchProcessObject node:internal/bootstrap/pre_execution:103:28
+      1  100.0%        LazyCompile: ~prepareMainThreadExecution node:internal/bootstrap/pre_execution:29:36
+      1  100.0%          Function: ~<anonymous> node:internal/main/run_main_module:1:1
+      1    3.4%      LazyCompile: ~parserOnIncoming node:_http_server:880:26
+      1  100.0%        LazyCompile: ~parserOnHeadersComplete node:_http_common:77:33
+      1    3.4%      LazyCompile: ~openSync node:fs:585:18
+      1  100.0%        LazyCompile: ~readFileSync node:fs:459:22
+      1  100.0%          LazyCompile: ~Module._extensions..js node:internal/modules/cjs/loader:1135:37
+      1  100.0%            LazyCompile: ~Module.load node:internal/modules/cjs/loader:992:33
+      1    3.4%      LazyCompile: ~nextTick node:internal/process/task_queues:104:18
+      1  100.0%        LazyCompile: ~defaultTriggerAsyncIdScope node:internal/async_hooks:455:36
+      1  100.0%          LazyCompile: ~setupListenHandle node:net:1385:27
+      1  100.0%            LazyCompile: ~listenInCluster node:net:1470:25
+      1    3.4%      LazyCompile: ~module.exports /Volumes/Datos/Coderhouse/Comision32065Coderhouse/clase32/ejemplos/nodeProfiler/node_modules/qs/lib/parse.js:239:27
+      1  100.0%        LazyCompile: ~parseExtendedQueryString /Volumes/Datos/Coderhouse/Comision32065Coderhouse/clase32/ejemplos/nodeProfiler/node_modules/express/lib/utils.js:289:34
+      1  100.0%          LazyCompile: ~query /Volumes/Datos/Coderhouse/Comision32065Coderhouse/clase32/ejemplos/nodeProfiler/node_modules/express/lib/middleware/query.js:39:24
+      1  100.0%            LazyCompile: ~handle /Volumes/Datos/Coderhouse/Comision32065Coderhouse/clase32/ejemplos/nodeProfiler/node_modules/express/lib/router/layer.js:86:49
+      1    3.4%      LazyCompile: ~insert node:internal/timers:350:16
+      1  100.0%        LazyCompile: ~setUnrefTimeout node:internal/timers:372:25
+      1  100.0%          LazyCompile: ~cache node:internal/http:19:15
+      1  100.0%            LazyCompile: ~utcDate node:internal/http:14:17
+      1    3.4%      LazyCompile: ~createHttpErrorConstructor /Volumes/Datos/Coderhouse/Comision32065Coderhouse/clase32/ejemplos/nodeProfiler/node_modules/http-errors/index.js:112:37
+      1  100.0%        Function: ~<anonymous> /Volumes/Datos/Coderhouse/Comision32065Coderhouse/clase32/ejemplos/nodeProfiler/node_modules/http-errors/index.js:1:1
+      1  100.0%          Function: ^Module._compile node:internal/modules/cjs/loader:1080:37
+      1  100.0%            LazyCompile: ~Module._extensions..js node:internal/modules/cjs/loader:1135:37
+      1    3.4%      LazyCompile: ~cache node:internal/http:19:15
+      1  100.0%        LazyCompile: ~utcDate node:internal/http:14:17
+      1  100.0%          LazyCompile: ~_storeHeader node:_http_outgoing:384:22
+      1  100.0%            LazyCompile: ~writeHead node:_http_server:292:19
+      1    3.4%      LazyCompile: ~Url node:url:60:13
+      1  100.0%        Function: ^fastparse /Volumes/Datos/Coderhouse/Comision32065Coderhouse/clase32/ejemplos/nodeProfiler/node_modules/parseurl/index.js:95:20
+      1  100.0%          Function: ^parseurl /Volumes/Datos/Coderhouse/Comision32065Coderhouse/clase32/ejemplos/nodeProfiler/node_modules/parseurl/index.js:35:19
+      1  100.0%            Function: ^getPathname /Volumes/Datos/Coderhouse/Comision32065Coderhouse/clase32/ejemplos/nodeProfiler/node_modules/express/lib/router/index.js:537:21
+      1    3.4%      Function: ~<anonymous> node:internal/main/run_main_module:1:1
+      1    3.4%      Function: ~<anonymous> node:internal/fs/promises:1:1
+      1  100.0%        Function: ^compileForInternalLoader node:internal/bootstrap/loaders:316:27
+      1  100.0%          Function: ^nativeModuleRequire node:internal/bootstrap/loaders:349:29
+      1  100.0%            Function: ~<anonymous> node:internal/modules/esm/load:1:1
+      1    3.4%      Function: ^job.ondone node:internal/crypto/pbkdf2:56:16
+
+     32    1.5%  t node::fs::Read(v8::FunctionCallbackInfo<v8::Value> const&)
+     32  100.0%    t node::options_parser::OptionsParser<node::PerIsolateOptions>::Parse(std::__1::vector<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::allocator<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > > >*, std::__1::vector<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::allocator<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > > >*, std::__1::vector<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::allocator<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > > >*, node::PerIsolateOptions*, node::OptionEnvvarSettings, std::__1::vector<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::allocator<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > > >*) const
+     25   78.1%      Function: ^readSync node:fs:699:18
+     25  100.0%        Function: ^tryReadSync node:fs:438:21
+     24   96.0%          Function: ^readFileSync node:fs:459:22
+     16   66.7%            LazyCompile: ~Module._extensions..js node:internal/modules/cjs/loader:1135:37
+      7   29.2%            Function: ^Module._extensions..js node:internal/modules/cjs/loader:1135:37
+      1    4.2%            LazyCompile: ~Module._extensions..json node:internal/modules/cjs/loader:1185:39
+      1    4.0%          LazyCompile: ~readFileSync node:fs:459:22
+      1  100.0%            LazyCompile: ~Module._extensions..js node:internal/modules/cjs/loader:1135:37
+      7   21.9%      LazyCompile: ~readSync node:fs:699:18
+      7  100.0%        LazyCompile: ~tryReadSync node:fs:438:21
+      7  100.0%          LazyCompile: ~readFileSync node:fs:459:22
+      7  100.0%            LazyCompile: ~Module._extensions..js node:internal/modules/cjs/loader:1135:37
+
+     28    1.3%  t node::fs::InternalModuleReadJSON(v8::FunctionCallbackInfo<v8::Value> const&)
+     28  100.0%    t node::options_parser::OptionsParser<node::PerIsolateOptions>::Parse(std::__1::vector<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::allocator<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > > >*, std::__1::vector<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::allocator<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > > >*, std::__1::vector<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::allocator<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > > >*, node::PerIsolateOptions*, node::OptionEnvvarSettings, std::__1::vector<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::allocator<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > > >*) const
+     22   78.6%      Function: ^read node:internal/modules/package_json_reader:16:14
+     22  100.0%        Function: ^readPackage node:internal/modules/cjs/loader:301:21
+     19   86.4%          Function: ^resolveExports node:internal/modules/cjs/loader:483:24
+     19  100.0%            Function: ^Module._findPath node:internal/modules/cjs/loader:505:28
+      3   13.6%          LazyCompile: ~resolveExports node:internal/modules/cjs/loader:483:24
+      3  100.0%            Function: ^Module._findPath node:internal/modules/cjs/loader:505:28
+      6   21.4%      LazyCompile: ~read node:internal/modules/package_json_reader:16:14
+      4   66.7%        LazyCompile: ~readPackage node:internal/modules/cjs/loader:301:21
+      3   75.0%          LazyCompile: ~resolveExports node:internal/modules/cjs/loader:483:24
+      3  100.0%            LazyCompile: ~Module._findPath node:internal/modules/cjs/loader:505:28
+      1   25.0%          LazyCompile: ~readPackageScope node:internal/modules/cjs/loader:332:26
+      1  100.0%            LazyCompile: ~shouldUseESMLoader node:internal/modules/run_main:30:28
+      2   33.3%        Function: ^readPackage node:internal/modules/cjs/loader:301:21
+      2  100.0%          LazyCompile: ~resolveExports node:internal/modules/cjs/loader:483:24
+      2  100.0%            Function: ^Module._findPath node:internal/modules/cjs/loader:505:28
+
+     26    1.2%  T _host_get_special_port
+      4   15.4%    t node::options_parser::OptionsParser<node::PerIsolateOptions>::Parse(std::__1::vector<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::allocator<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > > >*, std::__1::vector<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::allocator<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > > >*, std::__1::vector<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::allocator<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > > >*, node::PerIsolateOptions*, node::OptionEnvvarSettings, std::__1::vector<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::allocator<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > > >*) const
+      1   25.0%      LazyCompile: ~prepareStackTrace node:internal/errors:90:27
+      1  100.0%        t node::options_parser::OptionsParser<node::PerIsolateOptions>::Parse(std::__1::vector<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::allocator<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > > >*, std::__1::vector<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::allocator<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > > >*, std::__1::vector<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::allocator<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > > >*, node::PerIsolateOptions*, node::OptionEnvvarSettings, std::__1::vector<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::allocator<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > > >*) const
+      1  100.0%          LazyCompile: ~getStack /Volumes/Datos/Coderhouse/Comision32065Coderhouse/clase32/ejemplos/nodeProfiler/node_modules/depd/index.js:381:19
+      1  100.0%            LazyCompile: ~depd /Volumes/Datos/Coderhouse/Comision32065Coderhouse/clase32/ejemplos/nodeProfiler/node_modules/depd/index.js:103:15
+      1   25.0%      LazyCompile: ~hasObserver node:internal/perf/observe:460:21
+      1  100.0%        LazyCompile: ~ServerResponse node:_http_server:183:24
+      1  100.0%          LazyCompile: ~parserOnIncoming node:_http_server:880:26
+      1  100.0%            LazyCompile: ~parserOnHeadersComplete node:_http_common:77:33
+      1   25.0%      LazyCompile: ~compileFunction node:vm:316:25
+      1  100.0%        LazyCompile: ~wrapSafe node:internal/modules/cjs/loader:1040:18
+      1  100.0%          LazyCompile: ~Module._compile node:internal/modules/cjs/loader:1080:37
+      1  100.0%            LazyCompile: ~Module._extensions..js node:internal/modules/cjs/loader:1135:37
+      1   25.0%      Function: ^job.ondone node:internal/crypto/pbkdf2:56:16
+
