@@ -1,0 +1,14 @@
+S3 -> almacenamiento de archivos e imágenes.
+SES -> envio de correos
+COGNITO -> autenticación
+EC2 -> Servidores virtuales.
+Cloud formation -> IaaS
+SQS -> Colas de mensajería.
+SNS -> notificaciones
+Cloud Watch -> logueo de los servicios
+RDS -> BDD Mysql
+Route 53 -> balanceador de carga
+Lambda -> aplicaciones serverless
+ECR -> subir imágenes de docker para luego desplegar en los Servidores
+Athena -> consultas sql en los logs de AWS
+EKS -> Kubernetes en AWS
