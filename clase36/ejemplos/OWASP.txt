@@ -1,0 +1,46 @@
+<?xml version=“1.0” encoding=“ISO-8859-1”?>
+<!DOCTYPE foo [
+  <!ELEMENT foo ANY >
+  <!ENTITY xxe SYSTEM “rm -r ” >]>
+<foo>&xxe;</foo>
+
+
+<script type="text/javascript">document.location="http://192.168.0.48:3000"</script>
+
+
+{
+    rol: "admin",
+    usuario: "alex"
+}
+
+ASDF3756XCVAS245245
+
+
+deserializar
+
+//invitado
+
+{
+    rol: "admin",
+    usuario: "alex"
+}
+
+//Validar que el usuario alex efectivamente sea administrador
+
+
+//alex.pinaida@test.com
+//obtener informacion de los productos de x tienda
+
+//Como backend no creo al 100% lo que me envia el frontend
+
+//Validar si el usuario con correo alex.pinaida@test.com tiene asignada la tienda 123
+
+// si no tiene acceso a esa tienda
+
+//Quiero saber los productos del store con id 123
+
+
+select * from productos where store_id = 123;
+
+
+
