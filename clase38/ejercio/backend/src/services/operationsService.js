@@ -2,9 +2,26 @@ import operaciones from 'operacionesaritmeticaschap';
 import { getAll, guardar } from '../repositories/operationsDBRepository.js'
 
 async function getSuma(num1, num2) {
-    const sumaResult = await operaciones.suma(num1, num2);
-    await guardarOperacion('SUMA', { num1, num2 }, sumaResult);
-    return sumaResult;
+    try {
+        const sumaResult = await operaciones.suma(num1, num2);
+        await guardarOperacion('SUMA', { num1, num2 }, sumaResult);
+        return sumaResult;   
+    } catch (error) {
+        
+    }
+}
+
+async function findOperation(operation) {
+    try {
+        const operation = await operaciones.find(operation);
+        if (operation.length > 0) {
+            return operation;
+        } else {
+            throw OperationNotFound();
+        }
+    } catch (error) {
+        
+    }
 }
 
 async function getResta(num1, num2) {
