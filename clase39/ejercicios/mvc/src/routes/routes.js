@@ -1,4 +1,5 @@
 import { Router } from 'express';
+import { getHora } from '../controllers/horaController.js';
 import {
     postPersonController, getPersonController, postDataOnWire, getDataOnWire, getDataJson
 } from '../controllers/personController.js';
@@ -12,5 +13,7 @@ router.get('/html-onwire', getPersonController);
 router.post('/data-onwire', postDataOnWire);
 router.get('/data-onwire', getDataOnWire);
 router.get('/data-json', getDataJson);
+
+router.get('/datos', getHora)
 
 export default router;
