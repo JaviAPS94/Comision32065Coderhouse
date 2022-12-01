@@ -1,0 +1,25 @@
+{
+  "type": "module",
+  "name": "projecttotest",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "PERSISTENCIA=MONGO mocha test/*.test.js",
+    "start": "PERSISTENCIA=MONGO node src/main.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "chai": "^4.3.6",
+    "faker": "^5.5.3",
+    "mocha": "^10.0.0",
+    "supertest": "^6.2.4"
+  },
+  "dependencies": {
+    "@hapi/joi": "^17.1.1",
+    "express": "^4.18.1",
+    "mongoose": "^6.5.2"
+  }
+}
